@@ -1,379 +1,490 @@
-<!DOCTYPE html>
+<div id="quiz" class="hidden mt-4 text-sm space-y-3">
+
+<p><b>Overview:</b> Online quiz and assessment system.</p>
+
+<p><b>My Contribution:</b></p>
+<ul class="list-disc ml-6 space-y-1">
+<li>Built dynamic quiz engine</li>
+<li>Implemented real-time scoring system</li>
+<li>Developed analytics dashboard</li>
+</ul>
+
+<p><b>Impact:</b> Enabled automated assessments and performance tracking.</p>
+
+</div>  like this for all projects in one palce      in below <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kajal Shukla - Portfolio</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- Font Awesome CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kajal Shukla | Full Stack & AI-Enhanced Developer</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        integrity="sha512-7v7bh8bUmsE60t1p4eWZ4LNT+JcVx1v2n73AgkUa6U1wX35HRKpMQBtLIlZBXGc5lCrXj8vW8UJeYF0KAOGsYA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            padding-top: 56px;
-        }
-
-        .navbar {
-            background-color: #343a40;
-        }
-
-        .navbar-brand,
-        .navbar-nav .nav-link {
-            color: #ffffff;
-        }
-
-        .navbar-toggler-icon {
-            background-color: #ffffff;
-        }
-
-        .sticky-top {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-        }
-
-        section {
-            padding: 60px 0;
-        }
-
-        #about {
-            background-color: #f8f9fa;
-        }
-
-        #skills {
-            background-color: #e9ecef;
-        }
-
-        #projects {
-            background-color: #dee2e6;
-        }
-
-        #contact {
-            background-color: #ced4da;
-        }
-
-        .card {
-            margin-bottom: 20px;
-        }
-
-        footer {
-            background-color: #343a40;
-            color: #ffffff;
-            padding: 20px 0;
-        }
-
-        .contact-icons {
-            font-size: 24px;
-            margin-right: 10px;
-        }
-
-        .logo-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .logo-list-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-
-        .logo {
-            margin-bottom: 5px;
-            /* border-radius: 50%; */
-            overflow: hidden;
-            width: 65px;/*30px;*/
-            height: 45px;/*30px;*/
-            margin-right: 10px;
-        }
-
-        .list-view {
-            list-style: none
-        }
-    </style>
+<style>
+body { background:#0b0f19; }
+.card:hover { transform: translateY(-6px); transition:0.3s; }
+.glow { box-shadow:0 0 25px rgba(34,211,238,0.4); }
+</style>
 </head>
 
-<body>
+<body class="text-gray-300 font-sans">
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-        <a class="navbar-brand" href="#">Kajal Shukla</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#about">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#skills">Skills</a>
-                </li>
-                <!-- <li class="nav-item">
-                    <a class="nav-link" href="#roadmap">Experience</a>
-                </li> -->
-                <li class="nav-item">
-                    <a class="nav-link" href="#projects">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
-                </li>
-                <li class="nav-item">
-                     <!-- <a class="nav-link" href="resume.html" target="_blank">Resume</a> -->
-                    <a class="nav-link" href="image/Kajal_Shukla_Resume(21-05-2024).pdf" target="_blank">Resume</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+<div id="portfolioContent">
 
-    <!-- Image Slider -->
-    <!-- <section class="slider-container">
-        <div id="imageSlider" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="slider-image1.jpg" class="d-block w-100" alt="Slider Image 1">
-                </div>
-                <div class="carousel-item">
-                    <img src="slider-image2.jpg" class="d-block w-100" alt="Slider Image 2">
-                </div> -->
-    <!-- Add more slides as needed -->
-    <!-- </div>
-            <a class="carousel-control-prev" href="#imageSlider" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#imageSlider" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-    </section> -->
+<!-- HERO -->
+<section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="about-content">
-                        <h2>About Me</h2>
-                        <p>
-                            Hello there! I'm <b><i>KAJAL SHUKLA</i></b>, a passionate software developer on a mission to
-                            transform ideas
-                            into digital reality. With a keen eye for innovation and a love for problem-solving, I
-                            thrive in
-                            the dynamic world of coding.
-                        </p>
+<div class="w-40 h-40 rounded-full border-4 border-cyan-400 glow mb-6 flex items-center justify-center bg-gray-800">
+<span class="text-sm text-gray-400 text-center px-2">
+AI-Enhanced Developer
+</span>
+</div>
 
-                        <div class="highlighted-section">
-                            <h3>What I Bring to the Table:</h3>
-                            <ul>
-                                <li>🚀 Innovative Coding: I specialize in turning concepts into functional, elegant, and
-                                    efficient code.</li>
-                                <li>💡 Project Ideation: My mind is a playground of ideas, constantly buzzing with
-                                    creativity.</li>
-                                <li>🌐 Market Zone Mastery: I understand the pulse of the market and stay updated with
-                                    the latest trends.</li>
-                                <li>🎨 Animation Enthusiast: Beyond the lines of code, I have a creative side.</li>
-                                <li>🌱 Constant Learner: Committed to staying at the forefront of emerging technologies.
-                                </li>
-                            </ul>
-                        </div>
+<h1 class="text-5xl md:text-6xl text-white font-bold">Kajal Shukla</h1>
 
-                        <div class="why-work-with-me">
-                            <h3>Why Work With Me?</h3>
-                            <ul>
-                                <li>✨ Passion-Driven: I don't just code; I create digital experiences fueled by passion.
-                                </li>
-                                <li>🤝 Collaborative Spirit: I believe in the power of collaboration.</li>
-                                <li>📈 Results-Oriented: My goal is not just to deliver a project but to deliver
-                                    measurable success.</li>
-                            </ul>
-                        </div>
+<p class="mt-4 text-xl text-cyan-400">
+Full Stack Developer | Backend & API Specialist | AI-Enhanced Engineer
+</p>
 
-                        <p>
-                            Ready to embark on a coding journey together? Let's chat and explore the endless
-                            possibilities
-                            we can create. Feel free to reach out, and let's turn your ideas into reality!
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <!-- Add an image if you want -->
-                    <!-- <img src="your-image-url.jpg" alt="Your Name"> -->
-                </div>
-            </div>
+<p class="mt-6 max-w-2xl">
+I design and build scalable backend architectures, secure APIs, and AI-assisted workflows focused on performance, automation, and reliability.
+</p>
 
-        </div>
-    </section>
+<p class="mt-4 text-lg">
+Experience: <span id="totalExp" class="text-cyan-400 font-bold"></span>
+</p>
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <div class="container">
-            <h2 class="text-center">Skills</h2>
-            <div class="row">
-                <div class="col-md-3">
-                    <h4>Frontend</h4>
-                    <ul>
-                        <li class="list-view"><img class="logo" src="image/html5-logo-html-logo-2-removebg-preview.png">HTML</li>
-                        <li class="list-view"><img class="logo" src="image/css-removebg-preview.png">CSS</li>
-                        <li class="list-view"><img class="logo" src="image/bootstrap-removebg-preview.png">Bootstrap
-                        </li>
-                        <li class="list-view"><img class="logo" src="image/js-removebg-preview.png">JavaScript</li>
-                        <li class="list-view"><img class="logo" src="image/jquery-removebg-preview.png">jQuery</li>
-                        <li class="list-view"><img class="logo" src="image/angular-removebg-preview.png">Angular</li>
-                        <!-- <li class="list-view">Angular-Material</li> -->
-                    </ul>
-                </div>
-                <div class="col-md-3">
-                    <h4>Backend</h4>
-                    <ul>
-                        <li class="list-view"><img class="logo" src="image/php-removebg-preview.png">Core PHP</li>
-                        <li class="list-view"><img class="logo" src="image/laravel-removebg-preview.png">Laravel</li>
-                        <li class="list-view"><img class="logo" src="image/nodejs-removebg-preview.png">NodeJS</li>
-                        <li class="list-view"><img class="logo" src="image/express-removebg-preview.png">Express</li>
-                    </ul>
-                </div>
-                <div class="col-md-3">
-                    <h4>Databases</h4>
-                    <ul>
-                        <li class="list-view"><img class="logo" src="image/mysql-removebg-preview.png">MySQL</li>
-                        <li class="list-view"><img class="logo" src="image/mongo-removebg-preview.png">MongoDB</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- <section id="roadmap">
-        <div class="container">
-            <h2 class="text-center">Roadmap</h2>
-            <div class="timeline"> -->
-    <!-- Experience Timeline -->
-    <!-- <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h4>Company Name 1</h4>
-                        <p>Role: Your Role</p>
-                        <p>Duration: Date Range</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h4>Company Name 2</h4>
-                        <p>Role: Your Role</p>
-                        <p>Duration: Date Range</p>
-                    </div>
-                </div> -->
-    <!-- Add more timeline items as needed -->
-    <!-- </div>
-        </div>
-    </section> -->
-    <!-- Projects Section -->
-    <section id="projects">
-        <div class="container">
-            <h2 class="text-center">Projects</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card">
-                        <a  href='https://www.onesidetaxi.com' target="_blank">
-                        <img src="image/project_1.png" class="card-img-top" alt="Project 1"></a>
-                        <div class="card-body">
-                            <a  href='https://www.onesidetaxi.com' target="_blank"></a> <h5 class="card-title">One Side Taxi</h5></a>
-                            <!-- <p class="card-text">I have worked in that website by using Technologies Used | Laravel, SMTP, JavaScript, jQuery, Ajax, MySQL
-                            </p> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <a href="https://admatik.com.my/" target="_blank"><img src="image/project_2.png" class="card-img-top" alt="Project 2"></a>
-                        <div class="card-body">
-                            <h5 class="card-title">Admatik</h5>
-                            <!-- <p class="card-text">Brief description of Project 2.</p> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                      <a href="https://webstyleclub.website/bellingersbuttonboxes_new/" target="_blank">  <img src="image/project_3.png" class="card-img-top" alt="Project 3"></a>
-                        <div class="card-body">
-                            <h5 class="card-title">Bellingers Button Boxes</h5>
-                            <!-- <p class="card-text">Brief description of Project 3.</p> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                      <a href="" target="_blank">  <img src="image/project_4.jpeg" class="card-img-top" alt="Project 4"></a>
-                        <div class="card-body">
-                            <h5 class="card-title">HRM</h5>
-                            <!-- <p class="card-text">Brief description of Project 3.</p> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<button onclick="downloadPDF()" class="mt-6 border border-cyan-400 px-6 py-2 rounded-lg hover:bg-cyan-500 hover:text-black">
+Download Portfolio
+</button>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <h2 class="text-center">Contact Me</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <p>Feel free to reach out to me for collaborations or any inquiries.</p>
-                    <ul class="list-unstyled">
-                        <li><img src="image/gmail-removebg-preview.png" class="logo"> erkajalshukla@gmail.com</li>
-                        <li><img src="image/whatsapp-removebg-preview.png" class="logo"> 8882102287</li>
-                        <li><img src="image/linkedin-removebg-preview.png" class="logo"> <a  href='https://www.linkedin.com/in/kajal-shukla-a6213b154/' target="_blank">Linkendin</a>
+</section>
 
-                            <li><img src="image/github.png" class="logo"> <a  href='https://github.com/Kajalshukla-ka-i/' target="_blank">Github</a>
-                                <li><img src="image/skype.png" class="logo"> <a href='live:.cid.d58d663a2ae322e3'
-            target="_blank">Skype</a>
-                                
-                        </li>
+<!-- ABOUT -->
+<section class="py-12 px-6 text-center max-w-4xl mx-auto">
+<h2 class="text-3xl text-white font-bold mb-4">About Me</h2>
 
-                    </ul>
-                </div>
-                <!-- <div class="col-md-6">
-                    <form action="your-mail-script.php" method="post">
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" class="form-control" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Your Email</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Your Message</label>
-                            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
-                </div> -->
-            </div>
-        </div>
-    </section>
+<p>
+I am a Full Stack Developer specializing in backend systems and API engineering. I work extensively with PHP, Laravel, Node.js, and databases like MySQL and MongoDB. I focus on building scalable systems using clean code practices and AI-assisted workflows.
+</p>
+</section>
 
-    <!-- Footer -->
-    <footer class="text-white text-center py-3">
-        <p>&copy; <span id="current-year">2023</span> KAJAL SHUKLA. All Rights Reserved.</p>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-    </script>
+<!-- EXPERIENCE -->
+<section class="py-16 px-6">
+<h2 class="text-3xl text-white text-center font-bold mb-10">Professional Experience</h2>
+
+<div class="max-w-4xl mx-auto space-y-6">
+
+<div class="bg-gray-900 p-6 rounded-xl card">
+<h3 class="text-xl text-white font-semibold">Masthead Technologies Pvt Ltd</h3>
+<p id="mastheadDuration" class="text-sm text-gray-400"></p>
+<p class="mt-2">
+Built 20+ REST APIs, optimized backend performance, implemented automation workflows and monitoring systems.
+</p>
+</div>
+
+<div class="bg-gray-900 p-6 rounded-xl card">
+<h3 class="text-xl text-white font-semibold">Gventure Technologies</h3>
+<p id="gventureDuration" class="text-sm text-gray-400"></p>
+<p class="mt-2">
+Worked on scalable telecom systems focusing on session handling and backend optimization.
+</p>
+</div>
+
+<div class="bg-gray-900 p-6 rounded-xl card">
+<h3 class="text-xl text-white font-semibold">Prologic Web Solutions</h3>
+<p id="prologicDuration" class="text-sm text-gray-400"></p>
+<p class="mt-2">
+Developed Laravel modules and implemented secure authentication using JWT.
+</p>
+</div>
+
+</div>
+</section>
+
+<!-- TECH STACK -->
+<section class="py-12 text-center">
+<h2 class="text-3xl text-white font-bold mb-6">Technical Arsenal</h2>
+
+<div class="flex flex-wrap justify-center gap-3">
+<span class="bg-gray-800 px-3 py-1 rounded">PHP</span>
+<span class="bg-gray-800 px-3 py-1 rounded">Laravel</span>
+<span class="bg-gray-800 px-3 py-1 rounded">Node.js</span>
+<span class="bg-gray-800 px-3 py-1 rounded">Angular</span>
+<span class="bg-gray-800 px-3 py-1 rounded">JavaScript</span>
+<span class="bg-gray-800 px-3 py-1 rounded">MySQL</span>
+<span class="bg-gray-800 px-3 py-1 rounded">MongoDB</span>
+<span class="bg-gray-800 px-3 py-1 rounded">JWT</span>
+<span class="bg-gray-800 px-3 py-1 rounded">OAuth2</span>
+<span class="bg-gray-800 px-3 py-1 rounded">Linux</span>
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+<section class="py-16 px-6">
+<h2 class="text-3xl text-white text-center font-bold mb-10">Project Case Studies</h2>
+
+<div class="space-y-6 max-w-4xl mx-auto">
+
+<!-- MySamm -->
+<div class="bg-gray-900 p-6 rounded-xl card cursor-pointer glow" onclick="toggle('mysamm')">
+<h3 class="text-xl text-white font-semibold">MySamm Secure Platform</h3>
+<div id="mysamm" class="hidden mt-4 text-sm space-y-3">
+<p><b>Overview:</b> Enterprise backend platform focused on performance and automation.</p>
+<ul class="list-disc ml-6">
+<li>REST API development</li>
+<li>Graph-based monitoring</li>
+<li>API QC & Email tracking</li>
+<li>User hierarchy system</li>
+<li>Cron automation</li>
+</ul>
+<p><b>Tech:</b> PHP, Linux, MySQL, MongoDB</p>
+</div>
+</div>
+
+<!-- WeSmile -->
+<div class="bg-gray-900 p-6 rounded-xl card cursor-pointer" onclick="toggle('wesmile')">
+<h3 class="text-xl text-white font-semibold">WeSmile Dental App</h3>
+<div id="wesmile" class="hidden mt-4 text-sm">
+<ul class="list-disc ml-6">
+<li>Login/Signup APIs</li>
+<li>Booking & Appointment system</li>
+<li>Payment & WhatsApp integration</li>
+<li>Admin panel</li>
+</ul>
+</div>
+</div>
+
+<!-- HRM -->
+<div class="bg-gray-900 p-6 rounded-xl card cursor-pointer" onclick="toggle('hrm')">
+<h3 class="text-xl text-white font-semibold">HRM System</h3>
+<div id="hrm" class="hidden mt-4 text-sm">
+<ul class="list-disc ml-6">
+<li>Attendance & payroll</li>
+<li>Leave tracker</li>
+<li>Task module</li>
+<li>Role-based dashboards</li>
+</ul>
+</div>
+</div>
+
+<!-- LMS -->
+<div class="bg-gray-900 p-6 rounded-xl card cursor-pointer" onclick="toggle('lms')">
+<h3 class="text-xl text-white font-semibold">LMS</h3>
+<div id="lms" class="hidden mt-4 text-sm">
+<ul class="list-disc ml-6">
+<li>Course management</li>
+<li>Student tracking</li>
+<li>API-based backend</li>
+</ul>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- EDUCATION -->
+<section class="py-12 text-center">
+<h2 class="text-3xl text-white font-bold mb-4">Education</h2>
+<p>MCA – IMT College</p>
+<p>B.Voc – Software Development</p>
+</section>
+
+<!-- CONTACT -->
+<section class="py-16 text-center">
+<h2 class="text-3xl text-white font-bold mb-6">Contact</h2>
+
+<p>📧 erkajalshukla@gmail.com</p>
+<p>📱 +91-XXXXXXXXXX</p>
+<p>📍 Faridabad, Haryana</p>
+
+<p class="mt-4">LinkedIn: linkedin.com/in/yourprofile</p>
+<p>GitHub: github.com/yourusername</p>
+<p>Team ID: YOUR_TEAM_ID</p>
+
+</section>
+
+</div>
+
+<script>
+
+// toggle
+function toggle(id){
+document.getElementById(id).classList.toggle("hidden");
+}
+
+// experience calculation
+function calc(start, end, id, label){
+const s = new Date(start);
+const e = end === "present" ? new Date() : new Date(end);
+
+let y = e.getFullYear() - s.getFullYear();
+let m = e.getMonth() - s.getMonth();
+
+if(m < 0){ y--; m += 12; }
+
+document.getElementById(id).innerText =
+label + " • " + y + " yr " + m + " mo";
+}
+
+calc("2023-04-01","present","mastheadDuration","Apr 2023 – Present");
+calc("2022-06-01","2023-03-31","gventureDuration","Jun 2022 – Mar 2023");
+calc("2021-01-01","2022-05-31","prologicDuration","Jan 2021 – May 2022");
+
+// total experience
+function totalExp(){
+const start = new Date("2021-01-01");
+const now = new Date();
+
+let y = now.getFullYear() - start.getFullYear();
+let m = now.getMonth() - start.getMonth();
+
+if(m < 0){ y--; m += 12; }
+
+document.getElementById("totalExp").innerText =
+y + " yrs " + m + " months";
+}
+totalExp();
+
+// PDF
+async function downloadPDF(){
+const { jsPDF } = window.jspdf;
+const canvas = await html2canvas(document.getElementById("portfolioContent"));
+const img = canvas.toDataURL("image/png");
+
+const pdf = new jsPDF();
+pdf.addImage(img,"PNG",0,0,210,295);
+pdf.save("Kajal_Shukla_Portfolio.pdf");
+}
+
+</script>
 
 </body>
+</html>  rewrite complete html and proprer description of projects  and add <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kajal Shukla | AI-Enhanced Full Stack Developer</title>
 
-</html>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<style>
+body { background:#0b0f19; }
+.card:hover { transform: translateY(-6px); transition:0.3s; }
+.glow { box-shadow:0 0 25px rgba(34,211,238,0.4); }
+</style>
+</head>
+
+<body class="text-gray-300 font-sans">
+
+<div id="portfolioContent">
+
+<!-- HERO -->
+<section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
+
+<div class="w-40 h-40 rounded-full border-4 border-cyan-400 glow mb-6 flex items-center justify-center bg-gray-800">
+<span class="text-xs text-gray-400 text-center px-2">
+AI-Enhanced Developer
+</span>
+</div>
+
+<h1 class="text-5xl text-white font-bold">Kajal Shukla</h1>
+
+<p class="mt-4 text-xl text-cyan-400">
+Backend & API Specialist | Full Stack Developer | AI-Driven Engineer
+</p>
+
+<p class="mt-6 max-w-xl">
+Building scalable backend systems, secure APIs, and automation-driven platforms using AI-assisted workflows.
+</p>
+
+<p class="mt-4 text-lg">
+Experience: <span id="totalExp" class="text-cyan-400 font-bold"></span>
+</p>
+
+<button onclick="downloadPDF()" class="mt-6 border border-cyan-400 px-6 py-2 rounded hover:bg-cyan-500 hover:text-black">
+Download Portfolio
+</button>
+
+</section>
+
+<!-- ABOUT -->
+<section class="py-12 text-center max-w-3xl mx-auto px-6 reveal">
+<h2 class="text-3xl text-white mb-4">About Me</h2>
+<p>
+I specialize in backend architecture and API engineering with expertise in PHP, Laravel, and Node.js. 
+I leverage AI-assisted development to accelerate delivery, improve system performance, and build scalable enterprise solutions.
+</p>
+</section>
+
+<!-- EXPERIENCE TIMELINE -->
+<section class="py-16 px-6">
+<h2 class="text-3xl text-white text-center mb-10">Professional Journey</h2>
+
+<div class="relative max-w-4xl mx-auto border-l-2 border-cyan-400">
+
+<div class="ml-6 mb-10 reveal">
+<div class="absolute w-4 h-4 bg-cyan-400 rounded-full -left-2"></div>
+<h3 class="text-xl text-white">Masthead Technologies</h3>
+<p id="masthead" class="text-sm text-gray-400"></p>
+<p>Developed 20+ APIs, built automation systems, optimized backend performance.</p>
+</div>
+
+<div class="ml-6 mb-10 reveal">
+<div class="absolute w-4 h-4 bg-cyan-400 rounded-full -left-2"></div>
+<h3 class="text-xl text-white">Gventure Technologies</h3>
+<p id="gventure" class="text-sm text-gray-400"></p>
+<p>Worked on telecom backend systems and scalable session architecture.</p>
+</div>
+
+<div class="ml-6 mb-10 reveal">
+<div class="absolute w-4 h-4 bg-cyan-400 rounded-full -left-2"></div>
+<h3 class="text-xl text-white">Prologic Web Solutions</h3>
+<p id="prologic" class="text-sm text-gray-400"></p>
+<p>Built Laravel modules and secure authentication systems.</p>
+</div>
+
+</div>
+</section>
+
+<!-- TECH -->
+<section class="py-12 text-center">
+<h2 class="text-3xl text-white mb-6">Tech Stack</h2>
+
+<div class="flex flex-wrap justify-center gap-3">
+<span class="bg-gray-800 px-3 py-1 rounded">PHP</span>
+<span class="bg-gray-800 px-3 py-1 rounded">Laravel</span>
+<span class="bg-gray-800 px-3 py-1 rounded">Node.js</span>
+<span class="bg-gray-800 px-3 py-1 rounded">Angular</span>
+<span class="bg-gray-800 px-3 py-1 rounded">MySQL</span>
+<span class="bg-gray-800 px-3 py-1 rounded">MongoDB</span>
+<span class="bg-gray-800 px-3 py-1 rounded">JWT</span>
+<span class="bg-gray-800 px-3 py-1 rounded">OAuth2</span>
+</div>
+</section>
+
+<!-- CERTIFICATES -->
+<section class="py-16 text-center reveal">
+<h2 class="text-3xl text-white mb-8">AI & Professional Certifications</h2>
+
+<div class="flex flex-wrap justify-center gap-4">
+
+<span class="bg-gray-900 px-4 py-2 rounded">Agentic AI</span>
+<span class="bg-gray-900 px-4 py-2 rounded">Prompt Engineering</span>
+<span class="bg-gray-900 px-4 py-2 rounded">RAG Systems</span>
+<span class="bg-gray-900 px-4 py-2 rounded">AI-Assisted Development</span>
+
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section class="py-16 px-6">
+<h2 class="text-3xl text-white text-center mb-10">Projects</h2>
+
+<div class="space-y-4 max-w-4xl mx-auto">
+
+<div class="bg-gray-900 p-6 rounded card cursor-pointer" onclick="toggle('p1')">
+MySamm Secure Platform
+<div id="p1" class="hidden mt-3 text-sm">
+API QC, Graph Monitoring, Email Tracking, User Hierarchy, Cron Jobs
+</div>
+</div>
+
+<div class="bg-gray-900 p-6 rounded card cursor-pointer" onclick="toggle('p2')">
+WeSmile App
+<div id="p2" class="hidden mt-3 text-sm">
+Mobile APIs, Booking, Payment Integration, Admin Panel
+</div>
+</div>
+
+<div class="bg-gray-900 p-6 rounded card cursor-pointer" onclick="toggle('p3')">
+HRM System
+<div id="p3" class="hidden mt-3 text-sm">
+Attendance, Payroll, Leave Tracking, Role-Based Dashboards
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- CONTACT -->
+<section class="py-16 text-center">
+<h2 class="text-3xl text-white mb-6">Contact</h2>
+
+<p>📧 erkajalshukla@gmail.com</p>
+<p>📱 +91-XXXXXXXXXX</p>
+<p>📍 Faridabad, Haryana</p>
+
+<p class="mt-4">LinkedIn: linkedin.com/in/yourprofile</p>
+<p>GitHub: github.com/yourusername</p>
+<p>Team ID: YOUR_TEAM_ID</p>
+
+</section>
+
+</div>
+
+<script>
+
+// toggle
+function toggle(id){
+document.getElementById(id).classList.toggle("hidden");
+}
+
+// experience calc
+function calc(start, end, id, label){
+const s = new Date(start);
+const e = end === "present" ? new Date() : new Date(end);
+
+let y = e.getFullYear() - s.getFullYear();
+let m = e.getMonth() - s.getMonth();
+
+if(m<0){ y--; m+=12; }
+
+document.getElementById(id).innerText =
+label + " • " + y + " yr " + m + " mo";
+}
+
+calc("2023-04-01","present","masthead","Apr 2023 – Present");
+calc("2022-06-01","2023-03-31","gventure","Jun 2022 – Mar 2023");
+calc("2021-01-01","2022-05-31","prologic","Jan 2021 – May 2022");
+
+// total exp
+function totalExp(){
+const start = new Date("2021-01-01");
+const now = new Date();
+
+let y = now.getFullYear() - start.getFullYear();
+let m = now.getMonth() - start.getMonth();
+
+if(m<0){ y--; m+=12; }
+
+document.getElementById("totalExp").innerText =
+y + " yrs " + m + " months";
+}
+totalExp();
+
+// animation
+ScrollReveal().reveal('.reveal',{distance:'40px',duration:800});
+
+// PDF
+async function downloadPDF(){
+const { jsPDF } = window.jspdf;
+const canvas = await html2canvas(document.getElementById("portfolioContent"));
+const img = canvas.toDataURL("image/png");
+
+const pdf = new jsPDF();
+pdf.addImage(img,"PNG",0,0,210,295);
+pdf.save("Kajal_Portfolio.pdf");
+}
+
+</script>
+
+</body>
+</html> 
