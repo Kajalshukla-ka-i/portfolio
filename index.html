@@ -1,269 +1,3 @@
-<div id="quiz" class="hidden mt-4 text-sm space-y-3">
-
-<p><b>Overview:</b> Online quiz and assessment system.</p>
-
-<p><b>My Contribution:</b></p>
-<ul class="list-disc ml-6 space-y-1">
-<li>Built dynamic quiz engine</li>
-<li>Implemented real-time scoring system</li>
-<li>Developed analytics dashboard</li>
-</ul>
-
-<p><b>Impact:</b> Enabled automated assessments and performance tracking.</p>
-
-</div>  like this for all projects in one palce      in below <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kajal Shukla | Full Stack & AI-Enhanced Developer</title>
-
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-
-<style>
-body { background:#0b0f19; }
-.card:hover { transform: translateY(-6px); transition:0.3s; }
-.glow { box-shadow:0 0 25px rgba(34,211,238,0.4); }
-</style>
-</head>
-
-<body class="text-gray-300 font-sans">
-
-<div id="portfolioContent">
-
-<!-- HERO -->
-<section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
-
-<div class="w-40 h-40 rounded-full border-4 border-cyan-400 glow mb-6 flex items-center justify-center bg-gray-800">
-<span class="text-sm text-gray-400 text-center px-2">
-AI-Enhanced Developer
-</span>
-</div>
-
-<h1 class="text-5xl md:text-6xl text-white font-bold">Kajal Shukla</h1>
-
-<p class="mt-4 text-xl text-cyan-400">
-Full Stack Developer | Backend & API Specialist | AI-Enhanced Engineer
-</p>
-
-<p class="mt-6 max-w-2xl">
-I design and build scalable backend architectures, secure APIs, and AI-assisted workflows focused on performance, automation, and reliability.
-</p>
-
-<p class="mt-4 text-lg">
-Experience: <span id="totalExp" class="text-cyan-400 font-bold"></span>
-</p>
-
-<button onclick="downloadPDF()" class="mt-6 border border-cyan-400 px-6 py-2 rounded-lg hover:bg-cyan-500 hover:text-black">
-Download Portfolio
-</button>
-
-</section>
-
-<!-- ABOUT -->
-<section class="py-12 px-6 text-center max-w-4xl mx-auto">
-<h2 class="text-3xl text-white font-bold mb-4">About Me</h2>
-
-<p>
-I am a Full Stack Developer specializing in backend systems and API engineering. I work extensively with PHP, Laravel, Node.js, and databases like MySQL and MongoDB. I focus on building scalable systems using clean code practices and AI-assisted workflows.
-</p>
-</section>
-
-<!-- EXPERIENCE -->
-<section class="py-16 px-6">
-<h2 class="text-3xl text-white text-center font-bold mb-10">Professional Experience</h2>
-
-<div class="max-w-4xl mx-auto space-y-6">
-
-<div class="bg-gray-900 p-6 rounded-xl card">
-<h3 class="text-xl text-white font-semibold">Masthead Technologies Pvt Ltd</h3>
-<p id="mastheadDuration" class="text-sm text-gray-400"></p>
-<p class="mt-2">
-Built 20+ REST APIs, optimized backend performance, implemented automation workflows and monitoring systems.
-</p>
-</div>
-
-<div class="bg-gray-900 p-6 rounded-xl card">
-<h3 class="text-xl text-white font-semibold">Gventure Technologies</h3>
-<p id="gventureDuration" class="text-sm text-gray-400"></p>
-<p class="mt-2">
-Worked on scalable telecom systems focusing on session handling and backend optimization.
-</p>
-</div>
-
-<div class="bg-gray-900 p-6 rounded-xl card">
-<h3 class="text-xl text-white font-semibold">Prologic Web Solutions</h3>
-<p id="prologicDuration" class="text-sm text-gray-400"></p>
-<p class="mt-2">
-Developed Laravel modules and implemented secure authentication using JWT.
-</p>
-</div>
-
-</div>
-</section>
-
-<!-- TECH STACK -->
-<section class="py-12 text-center">
-<h2 class="text-3xl text-white font-bold mb-6">Technical Arsenal</h2>
-
-<div class="flex flex-wrap justify-center gap-3">
-<span class="bg-gray-800 px-3 py-1 rounded">PHP</span>
-<span class="bg-gray-800 px-3 py-1 rounded">Laravel</span>
-<span class="bg-gray-800 px-3 py-1 rounded">Node.js</span>
-<span class="bg-gray-800 px-3 py-1 rounded">Angular</span>
-<span class="bg-gray-800 px-3 py-1 rounded">JavaScript</span>
-<span class="bg-gray-800 px-3 py-1 rounded">MySQL</span>
-<span class="bg-gray-800 px-3 py-1 rounded">MongoDB</span>
-<span class="bg-gray-800 px-3 py-1 rounded">JWT</span>
-<span class="bg-gray-800 px-3 py-1 rounded">OAuth2</span>
-<span class="bg-gray-800 px-3 py-1 rounded">Linux</span>
-</div>
-
-</section>
-
-<!-- PROJECTS -->
-<section class="py-16 px-6">
-<h2 class="text-3xl text-white text-center font-bold mb-10">Project Case Studies</h2>
-
-<div class="space-y-6 max-w-4xl mx-auto">
-
-<!-- MySamm -->
-<div class="bg-gray-900 p-6 rounded-xl card cursor-pointer glow" onclick="toggle('mysamm')">
-<h3 class="text-xl text-white font-semibold">MySamm Secure Platform</h3>
-<div id="mysamm" class="hidden mt-4 text-sm space-y-3">
-<p><b>Overview:</b> Enterprise backend platform focused on performance and automation.</p>
-<ul class="list-disc ml-6">
-<li>REST API development</li>
-<li>Graph-based monitoring</li>
-<li>API QC & Email tracking</li>
-<li>User hierarchy system</li>
-<li>Cron automation</li>
-</ul>
-<p><b>Tech:</b> PHP, Linux, MySQL, MongoDB</p>
-</div>
-</div>
-
-<!-- WeSmile -->
-<div class="bg-gray-900 p-6 rounded-xl card cursor-pointer" onclick="toggle('wesmile')">
-<h3 class="text-xl text-white font-semibold">WeSmile Dental App</h3>
-<div id="wesmile" class="hidden mt-4 text-sm">
-<ul class="list-disc ml-6">
-<li>Login/Signup APIs</li>
-<li>Booking & Appointment system</li>
-<li>Payment & WhatsApp integration</li>
-<li>Admin panel</li>
-</ul>
-</div>
-</div>
-
-<!-- HRM -->
-<div class="bg-gray-900 p-6 rounded-xl card cursor-pointer" onclick="toggle('hrm')">
-<h3 class="text-xl text-white font-semibold">HRM System</h3>
-<div id="hrm" class="hidden mt-4 text-sm">
-<ul class="list-disc ml-6">
-<li>Attendance & payroll</li>
-<li>Leave tracker</li>
-<li>Task module</li>
-<li>Role-based dashboards</li>
-</ul>
-</div>
-</div>
-
-<!-- LMS -->
-<div class="bg-gray-900 p-6 rounded-xl card cursor-pointer" onclick="toggle('lms')">
-<h3 class="text-xl text-white font-semibold">LMS</h3>
-<div id="lms" class="hidden mt-4 text-sm">
-<ul class="list-disc ml-6">
-<li>Course management</li>
-<li>Student tracking</li>
-<li>API-based backend</li>
-</ul>
-</div>
-</div>
-
-</div>
-</section>
-
-<!-- EDUCATION -->
-<section class="py-12 text-center">
-<h2 class="text-3xl text-white font-bold mb-4">Education</h2>
-<p>MCA – IMT College</p>
-<p>B.Voc – Software Development</p>
-</section>
-
-<!-- CONTACT -->
-<section class="py-16 text-center">
-<h2 class="text-3xl text-white font-bold mb-6">Contact</h2>
-
-<p>📧 erkajalshukla@gmail.com</p>
-<p>📱 +91-XXXXXXXXXX</p>
-<p>📍 Faridabad, Haryana</p>
-
-<p class="mt-4">LinkedIn: linkedin.com/in/yourprofile</p>
-<p>GitHub: github.com/yourusername</p>
-<p>Team ID: YOUR_TEAM_ID</p>
-
-</section>
-
-</div>
-
-<script>
-
-// toggle
-function toggle(id){
-document.getElementById(id).classList.toggle("hidden");
-}
-
-// experience calculation
-function calc(start, end, id, label){
-const s = new Date(start);
-const e = end === "present" ? new Date() : new Date(end);
-
-let y = e.getFullYear() - s.getFullYear();
-let m = e.getMonth() - s.getMonth();
-
-if(m < 0){ y--; m += 12; }
-
-document.getElementById(id).innerText =
-label + " • " + y + " yr " + m + " mo";
-}
-
-calc("2023-04-01","present","mastheadDuration","Apr 2023 – Present");
-calc("2022-06-01","2023-03-31","gventureDuration","Jun 2022 – Mar 2023");
-calc("2021-01-01","2022-05-31","prologicDuration","Jan 2021 – May 2022");
-
-// total experience
-function totalExp(){
-const start = new Date("2021-01-01");
-const now = new Date();
-
-let y = now.getFullYear() - start.getFullYear();
-let m = now.getMonth() - start.getMonth();
-
-if(m < 0){ y--; m += 12; }
-
-document.getElementById("totalExp").innerText =
-y + " yrs " + m + " months";
-}
-totalExp();
-
-// PDF
-async function downloadPDF(){
-const { jsPDF } = window.jspdf;
-const canvas = await html2canvas(document.getElementById("portfolioContent"));
-const img = canvas.toDataURL("image/png");
-
-const pdf = new jsPDF();
-pdf.addImage(img,"PNG",0,0,210,295);
-pdf.save("Kajal_Shukla_Portfolio.pdf");
-}
-
-</script>
-
-</body>
-</html>  rewrite complete html and proprer description of projects  and add <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -385,33 +119,60 @@ I leverage AI-assisted development to accelerate delivery, improve system perfor
 </section>
 
 <!-- PROJECTS -->
-<section class="py-16 px-6">
-<h2 class="text-3xl text-white text-center mb-10">Projects</h2>
+<section id="projects" class="py-16 px-6">
+  <h2 class="text-3xl font-bold text-center text-white mb-10">Projects</h2>
 
-<div class="space-y-4 max-w-4xl mx-auto">
+  <div class="grid md:grid-cols-3 gap-6">
 
-<div class="bg-gray-900 p-6 rounded card cursor-pointer" onclick="toggle('p1')">
-MySamm Secure Platform
-<div id="p1" class="hidden mt-3 text-sm">
-API QC, Graph Monitoring, Email Tracking, User Hierarchy, Cron Jobs
-</div>
-</div>
+    <!-- MySamm -->
+    <a href="projects/mysamm.html" class="block bg-gray-900 p-6 rounded-lg hover:scale-105 transition border border-cyan-500">
+      <h3 class="text-xl font-semibold text-white">MySamm Secure Platform</h3>
+      <p class="mt-2">Enterprise-grade API system with RBAC, performance monitoring, and automation workflows.</p>
+    </a>
 
-<div class="bg-gray-900 p-6 rounded card cursor-pointer" onclick="toggle('p2')">
-WeSmile App
-<div id="p2" class="hidden mt-3 text-sm">
-Mobile APIs, Booking, Payment Integration, Admin Panel
-</div>
-</div>
+    <!-- WeSmile -->
+    <a href="projects/wesmile.html" class="block bg-gray-900 p-6 rounded-lg hover:scale-105 transition">
+      <h3 class="text-xl font-semibold text-white">WeSmile Dental App</h3>
+      <p class="mt-2">Mobile-first healthcare system with real-time APIs and payment integrations.</p>
+    </a>
 
-<div class="bg-gray-900 p-6 rounded card cursor-pointer" onclick="toggle('p3')">
-HRM System
-<div id="p3" class="hidden mt-3 text-sm">
-Attendance, Payroll, Leave Tracking, Role-Based Dashboards
-</div>
-</div>
+    <!-- Product -->
+    <a href="projects/product.html" class="block bg-gray-900 p-6 rounded-lg hover:scale-105 transition">
+      <h3 class="text-xl font-semibold text-white">Product Management System</h3>
+      <p class="mt-2">Full-stack lifecycle system using MEAN stack architecture.</p>
+    </a>
 
-</div>
+    <!-- HRM -->
+    <a href="projects/hrm.html" class="block bg-gray-900 p-6 rounded-lg hover:scale-105 transition border border-cyan-500">
+      <h3 class="text-xl font-semibold text-white">HRM System</h3>
+      <p class="mt-2">Biometric attendance, payroll, task management, and HR automation.</p>
+    </a>
+
+    <!-- Naukri Mitra -->
+    <a href="projects/naukrimitra.html" class="block bg-gray-900 p-6 rounded-lg hover:scale-105 transition">
+      <h3 class="text-xl font-semibold text-white">NaukriMitra</h3>
+      <p class="mt-2">Job platform with admin dashboard and third-party integrations.</p>
+    </a>
+
+    <!-- Need Analysis -->
+    <a href="projects/need-analysis.html" class="block bg-gray-900 p-6 rounded-lg hover:scale-105 transition">
+      <h3 class="text-xl font-semibold text-white">Need Analysis (Insurance App)</h3>
+      <p class="mt-2">Data-driven insurance selling and recommendation engine.</p>
+    </a>
+
+    <!-- LMS -->
+    <a href="projects/lms.html" class="block bg-gray-900 p-6 rounded-lg hover:scale-105 transition">
+      <h3 class="text-xl font-semibold text-white">Learning Management System</h3>
+      <p class="mt-2">Course platform with progress tracking and API-based architecture.</p>
+    </a>
+
+    <!-- Quiz -->
+    <a href="projects/quiz.html" class="block bg-gray-900 p-6 rounded-lg hover:scale-105 transition">
+      <h3 class="text-xl font-semibold text-white">Quiz Management System</h3>
+      <p class="mt-2">Dynamic quiz engine with analytics and real-time scoring.</p>
+    </a>
+
+  </div>
 </section>
 
 <!-- CONTACT -->
