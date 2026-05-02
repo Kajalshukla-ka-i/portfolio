@@ -23,26 +23,19 @@ body { background:#0b0f19; }
 <!-- HERO -->
 <section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
 
-<div class="w-40 h-40 rounded-full border-4 border-cyan-400 glow mb-6 
-flex flex-col items-center justify-center bg-gray-800 relative group">
+<div class="w-40 h-40 rounded-full border-4 border-cyan-400 glow mb-6 flex flex-col items-center justify-center bg-gray-800">
 
-<!-- Play Button -->
-<button onclick="toggleAudio()" 
-class="w-12 h-12 flex items-center justify-center rounded-full bg-cyan-500 text-black text-lg font-bold hover:scale-110 transition">
-▶
+<button onclick="toggleAudio()" class="text-cyan-400 text-sm mb-2">
+▶ Play Intro
 </button>
-
-<!-- Animated Pulse -->
-<div class="absolute w-full h-full rounded-full border border-cyan-400 opacity-20 animate-ping"></div>
-
-<!-- Label -->
-<span class="text-[10px] text-gray-400 mt-2 text-center">
-Tap to hear intro
-</span>
 
 <audio id="introAudio">
 <source src="assets/audio/intro.mp3" type="audio/mpeg">
 </audio>
+
+<span class="text-[10px] text-gray-500 text-center px-2">
+Voice Intro
+</span>
 
 </div>
 
@@ -164,13 +157,13 @@ I leverage AI-assisted development to accelerate delivery, improve system perfor
     </a>
 
     <!-- WeSmile -->
-    <a href="projects/wesmile.html" class="block bg-gray-900 p-6 rounded-lg hover:scale-105 transition border border-cyan-500">
+    <a href="projects/wesmile.html" class="block bg-gray-900 p-6 rounded-lg hover:scale-105 transition">
       <h3 class="text-xl font-semibold text-white">WeSmile Dental App</h3>
       <p class="mt-2">Mobile-first healthcare system with real-time APIs and payment integrations.</p>
     </a>
 
     <!-- Product -->
-    <a href="projects/product.html" class="block bg-gray-900 p-6 rounded-lg hover:scale-105 transition border border-cyan-500">
+    <a href="projects/product.html" class="block bg-gray-900 p-6 rounded-lg hover:scale-105 transition">
       <h3 class="text-xl font-semibold text-white">Product Management System</h3>
       <p class="mt-2">Full-stack lifecycle system using MEAN stack architecture.</p>
     </a>
@@ -182,25 +175,25 @@ I leverage AI-assisted development to accelerate delivery, improve system perfor
     </a>
 
     <!-- Naukri Mitra -->
-    <a href="projects/naukrimitra.html" class="block bg-gray-900 p-6 rounded-lg hover:scale-105 transition border border-cyan-500">
+    <a href="projects/naukrimitra.html" class="block bg-gray-900 p-6 rounded-lg hover:scale-105 transition">
       <h3 class="text-xl font-semibold text-white">NaukriMitra</h3>
       <p class="mt-2">Job platform with admin dashboard and third-party integrations.</p>
     </a>
 
     <!-- Need Analysis -->
-    <a href="projects/need-analysis.html" class="block bg-gray-900 p-6 rounded-lg hover:scale-105 transition border border-cyan-500">
+    <a href="projects/need-analysis.html" class="block bg-gray-900 p-6 rounded-lg hover:scale-105 transition">
       <h3 class="text-xl font-semibold text-white">Need Analysis (Insurance App)</h3>
       <p class="mt-2">Data-driven insurance selling and recommendation engine.</p>
     </a>
 
     <!-- LMS -->
-    <a href="projects/lms.html" class="block bg-gray-900 p-6 rounded-lg hover:scale-105 transition border border-cyan-500">
+    <a href="projects/lms.html" class="block bg-gray-900 p-6 rounded-lg hover:scale-105 transition">
       <h3 class="text-xl font-semibold text-white">Learning Management System</h3>
       <p class="mt-2">Course platform with progress tracking and API-based architecture.</p>
     </a>
 
     <!-- Quiz -->
-    <a href="projects/quiz.html" class="block bg-gray-900 p-6 rounded-lg hover:scale-105 transition border border-cyan-500">
+    <a href="projects/quiz.html" class="block bg-gray-900 p-6 rounded-lg hover:scale-105 transition">
       <h3 class="text-xl font-semibold text-white">Quiz Management System</h3>
       <p class="mt-2">Dynamic quiz engine with analytics and real-time scoring.</p>
     </a>
@@ -325,17 +318,10 @@ const audio = document.getElementById("introAudio");
 
 if(audio.paused){
 audio.play();
-event.target.innerText = "⏸";
 }else{
 audio.pause();
-event.target.innerText = "▶";
 }
 }
-const audio = document.getElementById("introAudio");
-
-audio.addEventListener("ended", () => {
-document.querySelector("button").innerText = "▶";
-});
 </script>
 
 </body>
