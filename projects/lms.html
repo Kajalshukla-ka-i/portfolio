@@ -1,49 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MySamm Project</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learning Management System</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+body { background:#0b0f19; }
+
+.section-card{
+background:#111827;
+padding:24px;
+border-radius:16px;
+margin-top:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.section-title{
+color:#22d3ee;
+font-weight:600;
+margin-bottom:10px;
+}
+
+ul li{
+margin-bottom:6px;
+}
+</style>
 </head>
 
-<body class="bg-black text-gray-300 p-6">
+<body class="text-gray-300 font-sans">
 
-<a href="../index.html" class="text-cyan-400">← Back</a>
+<!-- BACK -->
+<div class="sticky top-0 bg-black/70 backdrop-blur p-4">
+<a href="../index.html" class="text-cyan-400 hover:underline">
+← Back to Portfolio
+</a>
+</div>
 
-<h1 class="text-4xl text-white">Learning Management System</h1>
+<div class="max-w-4xl mx-auto px-4 py-8">
 
-<h2>Problem</h2>
-<p>
-Educational institutions required a scalable system to manage courses and student progress.
+<!-- TITLE -->
+<h1 class="text-4xl md:text-5xl text-white font-bold mb-2">
+Learning Management System
+</h1>
+
+<p class="text-cyan-400 text-sm mb-4">
+Role: Full Stack & API Developer
 </p>
 
-<h2>Solution</h2>
-<p>
-Built an LMS platform with API-driven backend and centralized management.
+<p class="text-gray-400 mb-6">
+A scalable digital learning platform designed to manage courses, track student progress, and streamline educational workflows through a centralized system.
 </p>
 
-<h2>Architecture</h2>
-<ul>
-<li>Course management system</li>
-<li>Student tracking system</li>
-</ul>
+<!-- PROBLEM -->
+<div class="section-card">
+<h2 class="section-title">Problem</h2>
+<p>
+Educational institutions required a scalable and centralized system to manage courses, student data, and learning progress efficiently, as traditional systems lacked automation and real-time tracking.
+</p>
+</div>
 
-<h2>My Contribution</h2>
-<ul>
-<li>Developed course modules</li>
-<li>Built student progress tracking</li>
-<li>Created admin dashboard</li>
-</ul>
+<!-- SOLUTION -->
+<div class="section-card">
+<h2 class="section-title">Solution</h2>
+<p>
+Developed a robust Learning Management System (LMS) with an API-driven backend, enabling centralized course management, student tracking, and seamless administrative control.
+</p>
+</div>
 
-<h2>Impact</h2>
-<ul>
+<!-- ARCHITECTURE -->
+<div class="section-card">
+<h2 class="section-title">Architecture</h2>
+<ul class="list-disc ml-6">
+<li>Course management system for structured learning</li>
+<li>Student tracking and progress monitoring system</li>
+<li>API-driven backend for scalability and integration</li>
+<li>Admin dashboard for centralized control</li>
+</ul>
+</div>
+
+<!-- CONTRIBUTION -->
+<div class="section-card">
+<h2 class="section-title">My Contribution</h2>
+<ul class="list-disc ml-6">
+<li>Developed course management modules</li>
+<li>Built student progress tracking system</li>
+<li>Created admin dashboard for course and user control</li>
+<li>Designed APIs for seamless frontend-backend communication</li>
+<li>Optimized database queries for performance</li>
+</ul>
+</div>
+
+<!-- CHALLENGES -->
+<div class="section-card">
+<h2 class="section-title">Challenges</h2>
+<ul class="list-disc ml-6">
+<li>Handling large student datasets efficiently</li>
+<li>Ensuring real-time progress tracking</li>
+<li>Designing scalable APIs for future expansion</li>
+</ul>
+</div>
+
+<!-- IMPACT -->
+<div class="section-card">
+<h2 class="section-title">Impact</h2>
+<ul class="list-disc ml-6">
 <li>Improved digital learning experience</li>
-<li>Centralized education system</li>
+<li>Centralized course and student management</li>
+<li>Enabled real-time tracking of student performance</li>
+<li>Reduced manual administrative workload</li>
 </ul>
+</div>
 
-<h2>Tech Stack</h2>
-<p>Laravel, PHP, JavaScript, MySQL, Node.js, MongoDB</p>
+<!-- TECH STACK -->
+<div class="section-card">
+<h2 class="section-title">Tech Stack</h2>
+
+<div class="flex flex-wrap gap-2 mt-2">
+<span class="bg-cyan-500/20 px-3 py-1 rounded text-sm">Laravel</span>
+<span class="bg-cyan-500/20 px-3 py-1 rounded text-sm">PHP</span>
+<span class="bg-cyan-500/20 px-3 py-1 rounded text-sm">JavaScript</span>
+<span class="bg-cyan-500/20 px-3 py-1 rounded text-sm">MySQL</span>
+<span class="bg-cyan-500/20 px-3 py-1 rounded text-sm">Node.js</span>
+<span class="bg-cyan-500/20 px-3 py-1 rounded text-sm">MongoDB</span>
+</div>
+
+</div>
+
+</div>
 
 </body>
 </html>
