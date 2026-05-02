@@ -225,18 +225,26 @@ I leverage AI-assisted development to accelerate delivery, improve system perfor
 </div>
 
 <script>
-
-// toggle
+// ======================
+// TOGGLE (GENERIC)
+// ======================
 function toggle(id){
-document.getElementById(id).classList.toggle("hidden");
+const el = document.getElementById(id);
+if(el){
+el.classList.toggle("hidden");
+}
 }
 
-// format date
+// ======================
+// DATE FORMAT
+// ======================
 function formatDate(date){
 return date.toLocaleString('en-US', { month: 'short', year: 'numeric' });
 }
 
-// calculate duration
+// ======================
+// DURATION CALCULATION
+// ======================
 function getDuration(start, end){
 let y = end.getFullYear() - start.getFullYear();
 let m = end.getMonth() - start.getMonth();
@@ -245,52 +253,94 @@ if(m < 0){
 y--;
 m += 12;
 }
-return {y,m};
+return { y, m };
 }
 
-// calculate all experiences dynamically
+// ======================
+// EXPERIENCE CALCULATION (DYNAMIC + SAFE)
+// ======================
 function calculateExperience(){
 
 let totalMonths = 0;
 
-document.querySelectorAll(".exp-item").forEach(item => {
+const items = document.querySelectorAll(".exp-item");
+
+items.forEach(item => {
 
 const start = new Date(item.dataset.start);
 const end = item.dataset.end === "present"
 ? new Date()
 : new Date(item.dataset.end);
 
-const {y, m} = getDuration(start, end);
+// skip invalid dates (extra safety)
+if(isNaN(start) || isNaN(end)) return;
 
-// show per company duration
-item.querySelector(".duration").innerText =
+const { y, m } = getDuration(start, end);
+
+// update duration safely
+const durationEl = item.querySelector(".duration");
+if(durationEl){
+durationEl.innerText =
 `${formatDate(start)} – ${item.dataset.end === "present" ? "Present" : formatDate(end)} • ${y} yr ${m} mo`;
+}
 
-// add to total
+// accumulate total
 totalMonths += (y * 12 + m);
 
 });
 
-// total experience
+// update total experience
 const totalYears = Math.floor(totalMonths / 12);
 const remMonths = totalMonths % 12;
 
-document.getElementById("totalExp").innerText =
-`${totalYears} yrs ${remMonths} months`;
+const totalExpEl = document.getElementById("totalExp");
+if(totalExpEl){
+totalExpEl.innerText = `${totalYears} yrs ${remMonths} months`;
 }
 
-calculateExperience();
+}
 
-// animation
-ScrollReveal().reveal('.reveal',{distance:'40px',duration:800});
+// ======================
+// AUDIO CONTROL
+// ======================
+function toggleAudio(){
+const audio = document.getElementById("introAudio");
+const btn = document.getElementById("audioBtn");
 
-// PDF with BLACK TEXT FIX
+if(!audio || !btn) return;
+
+if(audio.paused){
+audio.play();
+btn.innerText = "⏸";
+}else{
+audio.pause();
+btn.innerText = "▶";
+}
+}
+
+// reset button when audio ends
+function setupAudio(){
+const audio = document.getElementById("introAudio");
+const btn = document.getElementById("audioBtn");
+
+if(!audio || !btn) return;
+
+audio.addEventListener("ended", () => {
+btn.innerText = "▶";
+});
+}
+
+// ======================
+// PDF DOWNLOAD (BLACK TEXT FIX)
+// ======================
 async function downloadPDF(){
 
 const { jsPDF } = window.jspdf;
 const content = document.getElementById("portfolioContent");
 
-// clone to avoid UI color change
+if(!content) return;
+
+// clone DOM
 const clone = content.cloneNode(true);
 
 // force black text
@@ -298,7 +348,7 @@ clone.querySelectorAll("*").forEach(el => {
 el.style.color = "#000";
 });
 
-// hidden render container
+// render offscreen
 const wrapper = document.createElement("div");
 wrapper.style.position = "absolute";
 wrapper.style.left = "-9999px";
@@ -313,28 +363,31 @@ const pdf = new jsPDF("p","mm","a4");
 const imgWidth = 210;
 const imgHeight = canvas.height * imgWidth / canvas.width;
 
-pdf.addImage(img,"PNG",0,0,imgWidth,imgHeight);
+pdf.addImage(img, "PNG", 0, 0, imgWidth, imgHeight);
 pdf.save("Kajal_Portfolio.pdf");
 
 // cleanup
 document.body.removeChild(wrapper);
+
 }
 
-function toggleAudio(){
-const audio = document.getElementById("introAudio");
+// ======================
+// INIT (IMPORTANT)
+// ======================
+document.addEventListener("DOMContentLoaded", () => {
 
-if(audio.paused){
-audio.play();
-event.target.innerText = "⏸";
-}else{
-audio.pause();
-event.target.innerText = "▶";
-}
-}
-const audio = document.getElementById("introAudio");
+calculateExperience();
+setupAudio();
 
-audio.addEventListener("ended", () => {
-document.querySelector("button").innerText = "▶";
+// animations
+if(typeof ScrollReveal !== "undefined"){
+ScrollReveal().reveal('.reveal',{
+distance:'40px',
+duration:800,
+origin:'bottom'
+});
+}
+
 });
 </script>
 
