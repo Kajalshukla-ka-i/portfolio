@@ -1,58 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MySamm Project</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WeSmile Dental Application</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+body { background:#0b0f19; }
+
+.section-card{
+background:#111827;
+padding:24px;
+border-radius:16px;
+margin-top:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.section-title{
+color:#22d3ee;
+font-weight:600;
+margin-bottom:10px;
+}
+
+ul li{
+margin-bottom:6px;
+}
+</style>
 </head>
 
-<body class="bg-black text-gray-300 p-6">
+<body class="text-gray-300 font-sans">
 
-<a href="../index.html" class="text-cyan-400">← Back</a>
-<h1 class="text-4xl text-white">WeSmile Dental Application</h1>
+<!-- BACK BUTTON -->
+<div class="sticky top-0 bg-black/70 backdrop-blur p-4">
+<a href="../index.html" class="text-cyan-400 hover:underline">
+← Back to Portfolio
+</a>
+</div>
 
-<h2>Problem</h2>
+<div class="max-w-4xl mx-auto px-4 py-8">
+
+<!-- TITLE -->
+<h1 class="text-4xl md:text-5xl text-white font-bold mb-4">
+WeSmile Dental Application
+</h1>
+
+<p class="text-gray-400 mb-6">
+Mobile-first healthcare platform enabling real-time patient management, appointment booking, and hospital administration.
+</p>
+
+<!-- PROBLEM -->
+<div class="section-card">
+<h2 class="section-title">Problem</h2>
 <p>
 Hospitals needed a digital platform to manage patient data, appointments, and communication efficiently.
 </p>
+</div>
 
-<h2>Solution</h2>
+<!-- SOLUTION -->
+<div class="section-card">
+<h2 class="section-title">Solution</h2>
 <p>
 Developed a mobile-first API-driven system with real-time synchronization and admin dashboard.
 </p>
+</div>
 
-<h2>Architecture</h2>
-<ul>
+<!-- ARCHITECTURE -->
+<div class="section-card">
+<h2 class="section-title">Architecture</h2>
+<ul class="list-disc ml-6">
 <li>Mobile API backend</li>
 <li>Admin panel for hospitals</li>
 <li>Third-party integrations (Payment + WhatsApp)</li>
 </ul>
+</div>
 
-<h2>My Contribution</h2>
-<ul>
+<!-- CONTRIBUTION -->
+<div class="section-card">
+<h2 class="section-title">My Contribution</h2>
+<ul class="list-disc ml-6">
 <li>Built APIs for Login, Signup, Appointment, Booking</li>
 <li>Developed Medical History module</li>
 <li>Integrated Payment Gateway APIs</li>
 <li>Integrated WhatsApp APIs</li>
 <li>Built Admin Panel for hospitals</li>
 </ul>
+</div>
 
-<h2>Challenges</h2>
-<ul>
+<!-- CHALLENGES -->
+<div class="section-card">
+<h2 class="section-title">Challenges</h2>
+<ul class="list-disc ml-6">
 <li>Real-time sync between mobile and backend</li>
 <li>Secure payment handling</li>
 </ul>
+</div>
 
-<h2>Impact</h2>
-<ul>
+<!-- IMPACT -->
+<div class="section-card">
+<h2 class="section-title">Impact</h2>
+<ul class="list-disc ml-6">
 <li>Improved patient booking efficiency</li>
 <li>Enabled real-time communication</li>
 <li>Centralized hospital management</li>
 </ul>
+</div>
 
-<h2>Tech Stack</h2>
-<p>Laravel, React Native, MySQL, Swagger, Postman, JavaScript, Third-party APIs</p>
+<!-- TECH STACK -->
+<div class="section-card">
+<h2 class="section-title">Tech Stack</h2>
+
+<div class="flex flex-wrap gap-2 mt-2">
+<span class="bg-cyan-500/20 px-3 py-1 rounded text-sm">Laravel</span>
+<span class="bg-cyan-500/20 px-3 py-1 rounded text-sm">React Native</span>
+<span class="bg-cyan-500/20 px-3 py-1 rounded text-sm">MySQL</span>
+<span class="bg-cyan-500/20 px-3 py-1 rounded text-sm">Swagger</span>
+<span class="bg-cyan-500/20 px-3 py-1 rounded text-sm">Postman</span>
+<span class="bg-cyan-500/20 px-3 py-1 rounded text-sm">JavaScript</span>
+<span class="bg-cyan-500/20 px-3 py-1 rounded text-sm">Third-party APIs</span>
+</div>
+
+</div>
+
+</div>
 
 </body>
 </html>
