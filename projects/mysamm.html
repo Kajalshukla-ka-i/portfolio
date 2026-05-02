@@ -1,39 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MySamm Project</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MySamm Project</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+body { background:#0b0f19; }
+
+.section-card{
+background:#111827;
+padding:24px;
+border-radius:16px;
+margin-top:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.section-title{
+color:#22d3ee;
+font-weight:600;
+margin-bottom:10px;
+}
+
+ul li{
+margin-bottom:6px;
+}
+</style>
 </head>
 
-<body class="bg-black text-gray-300 p-6">
+<body class="text-gray-300 font-sans">
 
-<a href="../index.html" class="text-cyan-400">← Back</a>
+<!-- BACK BUTTON -->
+<div class="sticky top-0 bg-black/70 backdrop-blur p-4">
+<a href="../index.html" class="text-cyan-400 hover:underline">
+← Back to Portfolio
+</a>
+</div>
 
-<h1 class="text-4xl text-white">MySamm Secure Platform</h1>
+<div class="max-w-4xl mx-auto px-4 py-8">
 
-<h2>Problem</h2>
+<!-- TITLE -->
+<h1 class="text-4xl md:text-5xl text-white font-bold mb-4">
+MySamm Secure Platform
+</h1>
+
+<p class="text-gray-400 mb-6">
+Enterprise-grade backend system focused on API scalability, automation, and performance optimization.
+</p>
+
+<!-- PROBLEM -->
+<div class="section-card">
+<h2 class="section-title">Problem</h2>
 <p>
 The system required a scalable backend capable of handling multiple APIs, complex user hierarchies, and automation workflows while maintaining performance and reliability.
 </p>
+</div>
 
-<h2>Solution</h2>
+<!-- SOLUTION -->
+<div class="section-card">
+<h2 class="section-title">Solution</h2>
 <p>
 Designed a modular API-driven backend architecture with automation pipelines and monitoring systems to ensure scalability and performance.
 </p>
+</div>
 
-<h2>Architecture</h2>
-<ul>
+<!-- ARCHITECTURE -->
+<div class="section-card">
+<h2 class="section-title">Architecture</h2>
+<ul class="list-disc ml-6">
 <li>REST API-based backend</li>
 <li>Graph-based performance monitoring</li>
 <li>User hierarchy (Parent–Child system)</li>
 <li>Cron-based automation pipelines</li>
 <li>Email tracking services</li>
 </ul>
+</div>
 
-<h2>My Contribution</h2>
-<ul>
+<!-- CONTRIBUTION -->
+<div class="section-card">
+<h2 class="section-title">My Contribution</h2>
+<ul class="list-disc ml-6">
 <li>Built 20+ high-performance APIs</li>
 <li>Implemented API Quality Control (QC)</li>
 <li>Developed Email Tracking & Management system</li>
@@ -41,23 +89,44 @@ Designed a modular API-driven backend architecture with automation pipelines and
 <li>Built Cron scripts for automation</li>
 <li>Developed MTP utility scripts</li>
 </ul>
+</div>
 
-<h2>Challenges</h2>
-<ul>
+<!-- CHALLENGES -->
+<div class="section-card">
+<h2 class="section-title">Challenges</h2>
+<ul class="list-disc ml-6">
 <li>Maintaining API performance at scale</li>
 <li>Handling complex user relationships</li>
 <li>Ensuring automation reliability</li>
 </ul>
+</div>
 
-<h2>Impact</h2>
-<ul>
+<!-- IMPACT -->
+<div class="section-card">
+<h2 class="section-title">Impact</h2>
+<ul class="list-disc ml-6">
 <li>Improved API performance and monitoring</li>
 <li>Reduced manual processes</li>
 <li>Enabled scalable enterprise architecture</li>
 </ul>
+</div>
 
-<h2>Tech Stack</h2>
-<p>PHP, Linux, MySQL, MongoDB, JavaScript, FileZilla</p>
+<!-- TECH STACK -->
+<div class="section-card">
+<h2 class="section-title">Tech Stack</h2>
+
+<div class="flex flex-wrap gap-2 mt-2">
+<span class="bg-cyan-500/20 px-3 py-1 rounded text-sm">PHP</span>
+<span class="bg-cyan-500/20 px-3 py-1 rounded text-sm">Linux</span>
+<span class="bg-cyan-500/20 px-3 py-1 rounded text-sm">MySQL</span>
+<span class="bg-cyan-500/20 px-3 py-1 rounded text-sm">MongoDB</span>
+<span class="bg-cyan-500/20 px-3 py-1 rounded text-sm">JavaScript</span>
+<span class="bg-cyan-500/20 px-3 py-1 rounded text-sm">FileZilla</span>
+</div>
+
+</div>
+
+</div>
 
 </body>
 </html>
