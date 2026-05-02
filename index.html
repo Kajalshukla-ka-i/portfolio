@@ -33,29 +33,31 @@
     <!-- HERO -->
     <section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
 
-        </script>   <div class="w-40 h-40 rounded-full border-4 border-cyan-400 glow mb-6 
-flex flex-col items-center justify-center bg-gray-800 relative group">
+        </script>   
+        <div class="w-40 h-40 rounded-full border-4 border-cyan-400 glow mb-6 
+flex flex-col items-center justify-center bg-gray-800 relative">
 
+  <!-- Play Button -->
+  <button id="audioBtn"
+    class="w-12 h-12 flex items-center justify-center rounded-full bg-cyan-500 text-black text-lg font-bold hover:scale-110 transition">
+    ▶
+  </button>
 
-        <!-- Play Button -->
-        <button onclick="toggleAudio()"
-          class="w-12 h-12 flex items-center justify-center rounded-full bg-cyan-500 text-black text-lg font-bold hover:scale-110 transition">
-          ▶
-        </button>
+  <!-- Pulse -->
+  <div class="absolute w-full h-full rounded-full border border-cyan-400 opacity-20 animate-ping"></div>
 
-        <!-- Animated Pulse -->
-        <div class="absolute w-full h-full rounded-full border border-cyan-400 opacity-20 animate-ping"></div>
+  <!-- Label -->
+  <span class="text-[10px] text-gray-400 mt-2 text-center">
+    Tap to hear intro
+  </span>
 
-        <!-- Label -->
-        <span class="text-[10px] text-gray-400 mt-2 text-center">
-          Tap to hear intro
-        </span>
+  <!-- Audio -->
+  <audio id="introAudio" preload="auto">
+    <source src="./assets/audio/intro.mp3" type="audio/mpeg">
+    Your browser does not support audio
+  </audio>
 
-        <audio id="introAudio">
-          <source src="assets/audio/intro.mp3" type="audio/mpeg">
-        </audio>
-
-      </div> 
+</div> 
 
       <h1 class="text-5xl text-white font-bold">Kajal Shukla</h1>
 
@@ -437,6 +439,49 @@ function toggleAudio() {
     btn.innerText = "▶";
   }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const audio = document.getElementById("introAudio");
+  const btn = document.getElementById("audioBtn");
+
+  if (!audio || !btn) {
+    console.error("Audio elements not found");
+    return;
+  }
+
+  // Button click
+  btn.addEventListener("click", () => {
+
+    if (audio.paused) {
+      audio.currentTime = 0;
+
+      audio.play()
+        .then(() => {
+          btn.innerText = "⏸";
+        })
+        .catch(err => {
+          console.error("Audio play failed:", err);
+          alert("Audio not playing. Check file path or browser policy.");
+        });
+
+    } else {
+      audio.pause();
+      btn.innerText = "▶";
+    }
+
+  });
+
+  // Reset button when audio ends
+  audio.addEventListener("ended", () => {
+    btn.innerText = "▶";
+  });
+
+  // Debug errors
+  audio.addEventListener("error", () => {
+    console.error("Audio failed to load. Check file path.");
+  });
+
+});
   </script>
 </body>
 
