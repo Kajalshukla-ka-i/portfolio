@@ -313,6 +313,15 @@ pdf.save("Kajal_Portfolio.pdf");
 document.body.removeChild(wrapper);
 }
 
+function toggleAudio(){
+const audio = document.getElementById("introAudio");
+
+if(audio.paused){
+audio.play();
+}else{
+audio.pause();
+}
+}
 </script>
 
 </body>
