@@ -9,103 +9,68 @@
 
   <style>
     body { background:#0b0f19; }
-    .card { background:#111827; }
   </style>
 </head>
 
-<body class="text-gray-300 font-sans">
+<body class="text-gray-300 font-sans p-6 max-w-4xl mx-auto">
 
-<div class="max-w-5xl mx-auto px-6 py-10">
+<!-- Back -->
+<a href="../index.html" class="text-cyan-400 hover:underline">← Back</a>
 
-  <!-- Back -->
-  <a href="../index.html" class="text-cyan-400 hover:underline">← Back to Portfolio</a>
+<!-- Title -->
+<h1 class="text-4xl text-white mt-4 mb-6 font-bold">NaukriMitra Platform</h1>
 
-  <!-- Header -->
-  <div class="mt-6 mb-10">
-    <h1 class="text-4xl md:text-5xl font-bold text-white">NaukriMitra Platform</h1>
-    <p class="text-gray-400 mt-3 max-w-2xl">
-      A scalable recruitment platform designed to enable real-time job tracking, location-based matching, and seamless communication between recruiters and candidates.
-    </p>
-  </div>
+<!-- Problem -->
+<h2 class="text-2xl text-white mt-8 mb-2 font-semibold">Problem</h2>
+<p class="leading-relaxed">
+Recruitment processes lacked real-time tracking, centralized dashboards, and efficient location-based job matching. This resulted in delays, poor coordination between recruiters and candidates, and reduced hiring efficiency.
+</p>
 
-  <!-- Grid Layout -->
-  <div class="grid md:grid-cols-2 gap-6">
+<!-- Solution -->
+<h2 class="text-2xl text-white mt-8 mb-2 font-semibold">Solution</h2>
+<p class="leading-relaxed">
+Developed a scalable job platform using an API-driven architecture that enables real-time job tracking, location-based matching, and seamless communication between recruiters and job seekers.
+</p>
 
-    <!-- Problem -->
-    <div class="card p-6 rounded-xl border border-gray-700">
-      <h2 class="text-xl text-white font-semibold mb-3">Problem</h2>
-      <p>
-        Recruitment processes lacked real-time tracking, centralized dashboards, and efficient location-based job matching, leading to delays and poor user experience.
-      </p>
-    </div>
+<!-- Architecture -->
+<h2 class="text-2xl text-white mt-8 mb-2 font-semibold">Architecture</h2>
+<ul class="list-disc ml-6 space-y-2">
+<li>Admin & HR dashboards for centralized control</li>
+<li>API-based backend for job management</li>
+<li>Google Maps integration for location-based job discovery</li>
+<li>Phone communication APIs for real-time interaction</li>
+</ul>
 
-    <!-- Solution -->
-    <div class="card p-6 rounded-xl border border-gray-700">
-      <h2 class="text-xl text-white font-semibold mb-3">Solution</h2>
-      <p>
-        Built a modern job platform powered by API-driven architecture with real-time communication and geolocation-based job discovery features.
-      </p>
-    </div>
+<!-- Contribution -->
+<h2 class="text-2xl text-white mt-8 mb-2 font-semibold">My Contribution</h2>
+<ul class="list-disc ml-6 space-y-2">
+<li>Developed Admin and HR dashboards</li>
+<li>Built APIs for job posting, tracking, and management</li>
+<li>Integrated Google Maps API for geo-based job search</li>
+<li>Integrated phone communication APIs for real-time connectivity</li>
+</ul>
 
-    <!-- Architecture -->
-    <div class="card p-6 rounded-xl border border-gray-700">
-      <h2 class="text-xl text-white font-semibold mb-3">Architecture</h2>
-      <ul class="list-disc ml-5 space-y-1">
-        <li>Admin & HR dashboards</li>
-        <li>API-based job management system</li>
-        <li>Google Maps integration for location tracking</li>
-        <li>Real-time communication APIs</li>
-      </ul>
-    </div>
+<!-- Challenges -->
+<h2 class="text-2xl text-white mt-8 mb-2 font-semibold">Challenges</h2>
+<ul class="list-disc ml-6 space-y-2">
+<li>Implementing real-time job tracking across multiple users</li>
+<li>Handling accurate location-based services</li>
+<li>Maintaining performance with growing user and job data</li>
+</ul>
 
-    <!-- Contribution -->
-    <div class="card p-6 rounded-xl border border-gray-700">
-      <h2 class="text-xl text-white font-semibold mb-3">My Contribution</h2>
-      <ul class="list-disc ml-5 space-y-1">
-        <li>Developed Admin & HR dashboards</li>
-        <li>Built APIs for job posting and management</li>
-        <li>Integrated Google Maps API for location-based jobs</li>
-        <li>Integrated phone communication APIs</li>
-      </ul>
-    </div>
+<!-- Impact -->
+<h2 class="text-2xl text-white mt-8 mb-2 font-semibold">Impact</h2>
+<ul class="list-disc ml-6 space-y-2">
+<li>Improved hiring efficiency for recruiters</li>
+<li>Enhanced user experience for job seekers</li>
+<li>Enabled real-time job updates and tracking</li>
+</ul>
 
-    <!-- Challenges -->
-    <div class="card p-6 rounded-xl border border-gray-700">
-      <h2 class="text-xl text-white font-semibold mb-3">Challenges</h2>
-      <ul class="list-disc ml-5 space-y-1">
-        <li>Implementing real-time job tracking</li>
-        <li>Handling location-based services efficiently</li>
-        <li>Ensuring performance with large datasets</li>
-      </ul>
-    </div>
-
-    <!-- Impact -->
-    <div class="card p-6 rounded-xl border border-gray-700">
-      <h2 class="text-xl text-white font-semibold mb-3">Impact</h2>
-      <ul class="list-disc ml-5 space-y-1">
-        <li>Improved hiring efficiency</li>
-        <li>Enhanced recruiter and candidate experience</li>
-        <li>Enabled real-time job tracking and updates</li>
-      </ul>
-    </div>
-
-  </div>
-
-  <!-- Tech Stack -->
-  <div class="card p-6 rounded-xl border border-cyan-500 mt-8">
-    <h2 class="text-xl text-white font-semibold mb-4">Tech Stack</h2>
-
-    <div class="flex flex-wrap gap-3">
-      <span class="bg-gray-800 px-3 py-1 rounded">Node.js</span>
-      <span class="bg-gray-800 px-3 py-1 rounded">Angular</span>
-      <span class="bg-gray-800 px-3 py-1 rounded">MongoDB</span>
-      <span class="bg-gray-800 px-3 py-1 rounded">Express.js</span>
-      <span class="bg-gray-800 px-3 py-1 rounded">Google Maps API</span>
-    </div>
-  </div>
-
-  
-</div>
+<!-- Tech Stack -->
+<h2 class="text-2xl text-white mt-8 mb-2 font-semibold">Tech Stack</h2>
+<p class="leading-relaxed">
+Node.js, Angular, MongoDB, Express.js, Google Maps API
+</p>
 
 </body>
 </html>
