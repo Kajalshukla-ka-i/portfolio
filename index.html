@@ -309,50 +309,6 @@ Voice Intro
 
     }
 
-    // ======================
-    // AUDIO CONTROL
-    // ======================
-    // function toggleAudio() {
-    //   const audio = document.getElementById("introAudio");
-    //   const btn = document.getElementById("audioBtn");
-
-    //   if (!audio || !btn) return;
-
-
-    //   if (audio.paused) {
-    //     audio.currentTime = 0; // reset
-    //     audio.play()
-    //       .then(() => {
-    //         btn.innerText = "⏸";
-    //       })
-    //       .catch(err => {
-    //         console.error("Audio play failed:", err);
-    //         alert("Audio not loading. Check file path.");
-    //       });
-    //   } else {
-    //     audio.pause();
-    //     btn.innerText = "▶";
-    //   }
-    // }
-    // function setupAudio() {
-    //   const audio = document.getElementById("introAudio");
-    //   const btn = document.getElementById("audioBtn");
-
-    //   if (!audio || !btn) return;
-
-    //   audio.addEventListener("ended", () => {
-    //     btn.innerText = "▶";
-    //   });
-
-    //   audio.addEventListener("error", () => {
-    //     console.error("Audio failed to load.");
-    //   });
-    // }
-
-
-    // ======================
-    // PDF DOWNLOAD (BLACK TEXT FIX)
-    // ======================
     async function downloadPDF() {
 
       const { jsPDF } = window.jspdf;
@@ -432,48 +388,6 @@ function toggleAudio1() {
   }
 }
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   const audio = document.getElementById("introAudio");
-//   const btn = document.getElementById("audioBtn");
-
-//   if (!audio || !btn) {
-//     console.error("Audio elements not found");
-//     return;
-//   }
-
-//   // Button click
-//   btn.addEventListener("click", () => {
-
-//     if (audio.paused) {
-//       audio.currentTime = 0;
-
-//       audio.play()
-//         .then(() => {
-//           btn.innerText = "⏸";
-//         })
-//         .catch(err => {
-//           console.error("Audio play failed:", err);
-//           alert("Audio not playing. Check file path or browser policy.");
-//         });
-
-//     } else {
-//       audio.pause();
-//       btn.innerText = "▶";
-//     }
-
-//   });
-
-//   // Reset button when audio ends
-//   audio.addEventListener("ended", () => {
-//     btn.innerText = "▶";
-//   });
-
-//   // Debug errors
-//   audio.addEventListener("error", () => {
-//     console.error("Audio failed to load. Check file path.");
-//   });
-
-// });
 
 function toggleAudio(){
 const audio = document.getElementById("introAudio");
