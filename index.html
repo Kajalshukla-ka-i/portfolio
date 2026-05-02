@@ -410,7 +410,7 @@ Voice Intro
 
     });
 
-function toggleAudio() {
+function toggleAudio1() {
   const audio = document.getElementById("introAudio");
   const btn = document.getElementById("audioBtn");
 
@@ -474,6 +474,16 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+
+function toggleAudio(){
+const audio = document.getElementById("introAudio");
+
+if(audio.paused){
+audio.play();
+}else{
+audio.pause();
+}
+}
   </script>
 </body>
 
