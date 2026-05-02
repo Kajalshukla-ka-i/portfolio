@@ -64,22 +64,38 @@ I leverage AI-assisted development to accelerate delivery, improve system perfor
 
 <div class="relative max-w-4xl mx-auto border-l-2 border-cyan-400">
 
-<div class="ml-6 mb-10 reveal">
-<div class="absolute w-4 h-4 bg-cyan-400 rounded-full -left-2"></div>
+<!-- ITEM -->
+<!-- <div class="relative ml-6 mb-10 reveal"> -->
+  <div class="relative ml-6 mb-10 reveal exp-item"
+     data-start="2023-07-06"
+     data-end="2026-04-30">
+<div class="absolute -left-[9px] top-2 w-4 h-4 bg-cyan-400 rounded-full"></div>
+
 <h3 class="text-xl text-white">Masthead Technologies</h3>
 <p id="masthead" class="text-sm text-gray-400"></p>
 <p>Developed 20+ APIs, built automation systems, optimized backend performance.</p>
 </div>
 
-<div class="ml-6 mb-10 reveal">
-<div class="absolute w-4 h-4 bg-cyan-400 rounded-full -left-2"></div>
+<!-- ITEM -->
+<!-- <div class="relative ml-6 mb-10 reveal"> -->
+  <div class="relative ml-6 mb-10 reveal exp-item"
+     data-start="2022-05-17"
+     data-end="2023-05-17">
+
+<div class="absolute -left-[9px] top-2 w-4 h-4 bg-cyan-400 rounded-full"></div>
+
 <h3 class="text-xl text-white">Gventure Technologies</h3>
 <p id="gventure" class="text-sm text-gray-400"></p>
 <p>Worked on telecom backend systems and scalable session architecture.</p>
 </div>
 
-<div class="ml-6 mb-10 reveal">
-<div class="absolute w-4 h-4 bg-cyan-400 rounded-full -left-2"></div>
+<!-- ITEM -->
+<!-- <div class="relative ml-6 mb-10 reveal"> -->
+  <div class="relative ml-6 mb-10 reveal exp-item"
+     data-start="2021-10-19"
+     data-end="2022-03-30">
+<div class="absolute -left-[9px] top-2 w-4 h-4 bg-cyan-400 rounded-full"></div>
+
 <h3 class="text-xl text-white">Prologic Web Solutions</h3>
 <p id="prologic" class="text-sm text-gray-400"></p>
 <p>Built Laravel modules and secure authentication systems.</p>
@@ -198,51 +214,93 @@ function toggle(id){
 document.getElementById(id).classList.toggle("hidden");
 }
 
-// experience calc
-function calc(start, end, id, label){
-const s = new Date(start);
-const e = end === "present" ? new Date() : new Date(end);
-
-let y = e.getFullYear() - s.getFullYear();
-let m = e.getMonth() - s.getMonth();
-
-if(m<0){ y--; m+=12; }
-
-document.getElementById(id).innerText =
-label + " • " + y + " yr " + m + " mo";
+// format date
+function formatDate(date){
+return date.toLocaleString('en-US', { month: 'short', year: 'numeric' });
 }
 
-calc("2023-04-01","present","masthead","Apr 2023 – Present");
-calc("2022-06-01","2023-03-31","gventure","Jun 2022 – Mar 2023");
-calc("2021-01-01","2022-05-31","prologic","Jan 2021 – May 2022");
+// calculate duration
+function getDuration(start, end){
+let y = end.getFullYear() - start.getFullYear();
+let m = end.getMonth() - start.getMonth();
 
-// total exp
-function totalExp(){
-const start = new Date("2021-01-01");
-const now = new Date();
+if(m < 0){
+y--;
+m += 12;
+}
+return {y,m};
+}
 
-let y = now.getFullYear() - start.getFullYear();
-let m = now.getMonth() - start.getMonth();
+// calculate all experiences dynamically
+function calculateExperience(){
 
-if(m<0){ y--; m+=12; }
+let totalMonths = 0;
+
+document.querySelectorAll(".exp-item").forEach(item => {
+
+const start = new Date(item.dataset.start);
+const end = item.dataset.end === "present"
+? new Date()
+: new Date(item.dataset.end);
+
+const {y, m} = getDuration(start, end);
+
+// show per company duration
+item.querySelector(".duration").innerText =
+`${formatDate(start)} – ${item.dataset.end === "present" ? "Present" : formatDate(end)} • ${y} yr ${m} mo`;
+
+// add to total
+totalMonths += (y * 12 + m);
+
+});
+
+// total experience
+const totalYears = Math.floor(totalMonths / 12);
+const remMonths = totalMonths % 12;
 
 document.getElementById("totalExp").innerText =
-y + " yrs " + m + " months";
+`${totalYears} yrs ${remMonths} months`;
 }
-totalExp();
+
+calculateExperience();
 
 // animation
 ScrollReveal().reveal('.reveal',{distance:'40px',duration:800});
 
-// PDF
+// PDF with BLACK TEXT FIX
 async function downloadPDF(){
+
 const { jsPDF } = window.jspdf;
-const canvas = await html2canvas(document.getElementById("portfolioContent"));
+const content = document.getElementById("portfolioContent");
+
+// clone to avoid UI color change
+const clone = content.cloneNode(true);
+
+// force black text
+clone.querySelectorAll("*").forEach(el => {
+el.style.color = "#000";
+});
+
+// hidden render container
+const wrapper = document.createElement("div");
+wrapper.style.position = "absolute";
+wrapper.style.left = "-9999px";
+wrapper.appendChild(clone);
+document.body.appendChild(wrapper);
+
+const canvas = await html2canvas(clone, { scale: 2 });
 const img = canvas.toDataURL("image/png");
 
-const pdf = new jsPDF();
-pdf.addImage(img,"PNG",0,0,210,295);
+const pdf = new jsPDF("p","mm","a4");
+
+const imgWidth = 210;
+const imgHeight = canvas.height * imgWidth / canvas.width;
+
+pdf.addImage(img,"PNG",0,0,imgWidth,imgHeight);
 pdf.save("Kajal_Portfolio.pdf");
+
+// cleanup
+document.body.removeChild(wrapper);
 }
 
 </script>
