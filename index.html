@@ -23,19 +23,26 @@ body { background:#0b0f19; }
 <!-- HERO -->
 <section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
 
-<div class="w-40 h-40 rounded-full border-4 border-cyan-400 glow mb-6 flex flex-col items-center justify-center bg-gray-800">
+<div class="w-40 h-40 rounded-full border-4 border-cyan-400 glow mb-6 
+flex flex-col items-center justify-center bg-gray-800 relative group">
 
-<button onclick="toggleAudio()" class="text-cyan-400 text-sm mb-2">
-▶ Play Intro
+<!-- Play Button -->
+<button onclick="toggleAudio()" 
+class="w-12 h-12 flex items-center justify-center rounded-full bg-cyan-500 text-black text-lg font-bold hover:scale-110 transition">
+▶
 </button>
+
+<!-- Animated Pulse -->
+<div class="absolute w-full h-full rounded-full border border-cyan-400 opacity-20 animate-ping"></div>
+
+<!-- Label -->
+<span class="text-[10px] text-gray-400 mt-2 text-center">
+Tap to hear intro
+</span>
 
 <audio id="introAudio">
 <source src="assets/audio/intro.mp3" type="audio/mpeg">
 </audio>
-
-<span class="text-[10px] text-gray-500 text-center px-2">
-Voice Intro
-</span>
 
 </div>
 
@@ -318,10 +325,17 @@ const audio = document.getElementById("introAudio");
 
 if(audio.paused){
 audio.play();
+event.target.innerText = "⏸";
 }else{
 audio.pause();
+event.target.innerText = "▶";
 }
 }
+const audio = document.getElementById("introAudio");
+
+audio.addEventListener("ended", () => {
+document.querySelector("button").innerText = "▶";
+});
 </script>
 
 </body>
