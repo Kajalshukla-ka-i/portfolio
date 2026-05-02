@@ -53,7 +53,7 @@ flex flex-col items-center justify-center bg-gray-800 relative">
 
   <!-- Audio -->
   <audio id="introAudio" preload="auto">
-    <source src="./assets/audio/intro.mp3" type="audio/mpeg">
+    <source src="assets/audio/intro.mp3" type="audio/mpeg">
     Your browser does not support audio
   </audio>
 
@@ -418,6 +418,27 @@ flex flex-col items-center justify-center bg-gray-800 relative">
 
     });
 
+function toggleAudio() {
+  const audio = document.getElementById("introAudio");
+  const btn = document.getElementById("audioBtn");
+
+  if (!audio || !btn) return;
+
+  if (audio.paused) {
+    audio.currentTime = 0; // reset
+    audio.play()
+      .then(() => {
+        btn.innerText = "⏸";
+      })
+      .catch(err => {
+        console.error("Audio play failed:", err);
+        alert("Audio not loading. Check file path.");
+      });
+  } else {
+    audio.pause();
+    btn.innerText = "▶";
+  }
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   const audio = document.getElementById("introAudio");
