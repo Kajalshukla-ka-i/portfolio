@@ -416,7 +416,27 @@ flex flex-col items-center justify-center bg-gray-800 relative group">
 
     });
 
-    function toggleAudio(){ const audio = document.getElementById("introAudio"); if(audio.paused){ audio.play(); event.target.innerText = "⏸"; }else{ audio.pause(); event.target.innerText = "▶"; } } const audio = document.getElementById("introAudio"); audio.addEventListener("ended", () => { document.querySelector("button").innerText = "▶"; });
+function toggleAudio() {
+  const audio = document.getElementById("introAudio");
+  const btn = document.getElementById("audioBtn");
+
+  if (!audio || !btn) return;
+
+  if (audio.paused) {
+    audio.currentTime = 0; // reset
+    audio.play()
+      .then(() => {
+        btn.innerText = "⏸";
+      })
+      .catch(err => {
+        console.error("Audio play failed:", err);
+        alert("Audio not loading. Check file path.");
+      });
+  } else {
+    audio.pause();
+    btn.innerText = "▶";
+  }
+}
   </script>
 </body>
 
