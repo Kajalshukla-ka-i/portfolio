@@ -34,30 +34,22 @@
     <section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
 
         </script>   
-        <div class="w-40 h-40 rounded-full border-4 border-cyan-400 glow mb-6 
-flex flex-col items-center justify-center bg-gray-800 relative">
+        <div class="w-40 h-40 rounded-full border-4 border-cyan-400 glow mb-6 flex flex-col items-center justify-center bg-gray-800">
 
-  <!-- Play Button -->
-  <button id="audioBtn"
-    class="w-12 h-12 flex items-center justify-center rounded-full bg-cyan-500 text-black text-lg font-bold hover:scale-110 transition">
-    ▶
-  </button>
+<button onclick="toggleAudio()" class="text-cyan-400 text-sm mb-2">
+▶ Play Intro
+</button>
 
-  <!-- Pulse -->
-  <div class="absolute w-full h-full rounded-full border border-cyan-400 opacity-20 animate-ping"></div>
+<audio id="introAudio">
+<source src="assets/audio/intro.mp3" type="audio/mpeg">
+</audio>
 
-  <!-- Label -->
-  <span class="text-[10px] text-gray-400 mt-2 text-center">
-    Tap to hear intro
-  </span>
+<span class="text-[10px] text-gray-500 text-center px-2">
+Voice Intro
+</span>
 
-  <!-- Audio -->
-  <audio id="introAudio" preload="auto">
-    <source src="assets/audio/intro.mp3" type="audio/mpeg">
-    Your browser does not support audio
-  </audio>
+</div>
 
-</div> 
 
       <h1 class="text-5xl text-white font-bold">Kajal Shukla</h1>
 
