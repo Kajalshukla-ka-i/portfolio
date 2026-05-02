@@ -324,18 +324,20 @@ flex flex-col items-center justify-center bg-gray-800 relative group">
       if (!audio || !btn) return;
 
       if (audio.paused) {
-        audio.play().then(() => {
-          btn.innerText = "⏸";
-        }).catch(err => {
-          console.error("Audio play failed:", err);
-          alert("Audio couldn't play. Check file path or browser permissions.");
-        });
+        audio.currentTime = 0; // reset
+        audio.play()
+          .then(() => {
+            btn.innerText = "⏸";
+          })
+          .catch(err => {
+            console.error("Audio play failed:", err);
+            alert("Audio not loading. Check file path.");
+          });
       } else {
         audio.pause();
         btn.innerText = "▶";
       }
     }
-
     function setupAudio() {
       const audio = document.getElementById("introAudio");
       const btn = document.getElementById("audioBtn");
@@ -351,7 +353,7 @@ flex flex-col items-center justify-center bg-gray-800 relative group">
       });
     }
 
-    
+
     // ======================
     // PDF DOWNLOAD (BLACK TEXT FIX)
     // ======================
