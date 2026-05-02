@@ -494,28 +494,6 @@
 
     });
 
-    function toggleAudio1() {
-      const audio = document.getElementById("introAudio");
-      const btn = document.getElementById("audioBtn");
-
-      if (!audio || !btn) return;
-
-      if (audio.paused) {
-        audio.currentTime = 0; // reset
-        audio.play()
-          .then(() => {
-            btn.innerText = "⏸";
-          })
-          .catch(err => {
-            console.error("Audio play failed:", err);
-            alert("Audio not loading. Check file path.");
-          });
-      } else {
-        audio.pause();
-        btn.innerText = "▶";
-      }
-    }
-
 
     function toggleAudio() {
       const audio = document.getElementById("introAudio");
