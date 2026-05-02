@@ -1,418 +1,342 @@
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kajal Shukla | AI-Enhanced Full Stack Developer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kajal Shukla | AI-Enhanced Full Stack Developer</title>
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
-  <style>
-    body {
-      background: #0b0f19;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      transition: 0.3s;
-    }
-
-    .glow {
-      box-shadow: 0 0 25px rgba(34, 211, 238, 0.4);
-    }
-  </style>
+<style>
+body { background:#0b0f19; }
+.card:hover { transform: translateY(-6px); transition:0.3s; }
+.glow { box-shadow:0 0 25px rgba(34,211,238,0.4); }
+</style>
 </head>
 
 <body class="text-gray-300 font-sans">
 
-  <div id="portfolioContent">
+<div id="portfolioContent">
 
-    <!-- HERO -->
-    <section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
+<!-- HERO -->
+<section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
 
-      <div class="w-40 h-40 rounded-full border-4 border-cyan-400 glow mb-6 
+<div class="w-40 h-40 rounded-full border-4 border-cyan-400 glow mb-6 
 flex flex-col items-center justify-center bg-gray-800 relative group">
 
-        <!-- Play Button -->
-        <button id="audioBtn" onclick="toggleAudio()"
-          class="w-12 h-12 flex items-center justify-center rounded-full bg-cyan-500 text-black text-lg font-bold hover:scale-110 transition">
-          ▶
-        </button>
+<!-- Play Button -->
+<button onclick="toggleAudio()" 
+class="w-12 h-12 flex items-center justify-center rounded-full bg-cyan-500 text-black text-lg font-bold hover:scale-110 transition">
+▶
+</button>
 
-        <!-- Animated Pulse -->
-        <div class="absolute w-full h-full rounded-full border border-cyan-400 opacity-20 animate-ping"></div>
+<!-- Animated Pulse -->
+<div class="absolute w-full h-full rounded-full border border-cyan-400 opacity-20 animate-ping"></div>
 
-        <!-- Label -->
-        <span class="text-[10px] text-gray-400 mt-2 text-center">
-          Tap to hear intro
-        </span>
+<!-- Label -->
+<span class="text-[10px] text-gray-400 mt-2 text-center">
+Tap to hear intro
+</span>
 
-        <audio id="introAudio" preload="auto">
-          <source src="assets/audio/intro.mp3" type="audio/mpeg">
-        </audio>
+<audio id="introAudio">
+<source src="assets/audio/intro.mp3" type="audio/mpeg">
+</audio>
 
-      </div>
+</div>
 
-      <h1 class="text-5xl text-white font-bold">Kajal Shukla</h1>
+<h1 class="text-5xl text-white font-bold">Kajal Shukla</h1>
 
-      <p class="mt-4 text-xl text-cyan-400">
-        Backend & API Specialist | Full Stack Developer | AI-Driven Engineer
-      </p>
+<p class="mt-4 text-xl text-cyan-400">
+Backend & API Specialist | Full Stack Developer | AI-Driven Engineer
+</p>
 
-      <p class="mt-6 max-w-xl">
-        Building scalable backend systems, secure APIs, and automation-driven platforms using AI-assisted workflows.
-      </p>
+<p class="mt-6 max-w-xl">
+Building scalable backend systems, secure APIs, and automation-driven platforms using AI-assisted workflows.
+</p>
 
-      <p class="mt-4 text-lg">
-        Experience: <span id="totalExp" class="text-cyan-400 font-bold"></span>
-      </p>
+<p class="mt-4 text-lg">
+Experience: <span id="totalExp" class="text-cyan-400 font-bold"></span>
+</p>
 
-      <button onclick="downloadPDF()"
-        class="mt-6 border border-cyan-400 px-6 py-2 rounded hover:bg-cyan-500 hover:text-black">
-        Download Portfolio
-      </button>
+<button onclick="downloadPDF()" class="mt-6 border border-cyan-400 px-6 py-2 rounded hover:bg-cyan-500 hover:text-black">
+Download Portfolio
+</button>
 
-    </section>
+</section>
 
-    <!-- ABOUT -->
-    <section class="py-12 text-center max-w-3xl mx-auto px-6 reveal">
-      <h2 class="text-3xl text-white mb-4">About Me</h2>
-      <p>
-        I specialize in backend architecture and API engineering with expertise in PHP, Laravel, and Node.js.
-        I leverage AI-assisted development to accelerate delivery, improve system performance, and build scalable
-        enterprise solutions.
-      </p>
-    </section>
+<!-- ABOUT -->
+<section class="py-12 text-center max-w-3xl mx-auto px-6 reveal">
+<h2 class="text-3xl text-white mb-4">About Me</h2>
+<p>
+I specialize in backend architecture and API engineering with expertise in PHP, Laravel, and Node.js. 
+I leverage AI-assisted development to accelerate delivery, improve system performance, and build scalable enterprise solutions.
+</p>
+</section>
 
-    <!-- EXPERIENCE TIMELINE -->
-    <section class="py-16 px-6">
-      <h2 class="text-3xl text-white text-center mb-10">Professional Journey</h2>
+<!-- EXPERIENCE TIMELINE -->
+<section class="py-16 px-6">
+<h2 class="text-3xl text-white text-center mb-10">Professional Journey</h2>
 
-      <div class="relative max-w-4xl mx-auto border-l-2 border-cyan-400">
+<div class="relative max-w-4xl mx-auto border-l-2 border-cyan-400">
 
-        <!-- ITEM -->
-        <!-- <div class="relative ml-6 mb-10 reveal"> -->
-        <div class="relative ml-6 mb-10 reveal exp-item" data-start="2023-07-06" data-end="2026-04-30">
-          <div class="absolute -left-[9px] top-2 w-4 h-4 bg-cyan-400 rounded-full"></div>
+<!-- ITEM -->
+<!-- <div class="relative ml-6 mb-10 reveal"> -->
+  <div class="relative ml-6 mb-10 reveal exp-item"
+     data-start="2023-07-06"
+     data-end="2026-04-30">
+<div class="absolute -left-[9px] top-2 w-4 h-4 bg-cyan-400 rounded-full"></div>
 
-          <h3 class="text-xl text-white">Masthead Technologies</h3>
-          <p id="masthead" class="text-sm text-gray-400"></p>
-          <p>Developed 20+ APIs, built automation systems, optimized backend performance.</p>
-        </div>
+<h3 class="text-xl text-white">Masthead Technologies</h3>
+<p id="masthead" class="text-sm text-gray-400"></p>
+<p>Developed 20+ APIs, built automation systems, optimized backend performance.</p>
+</div>
 
-        <!-- ITEM -->
-        <!-- <div class="relative ml-6 mb-10 reveal"> -->
-        <div class="relative ml-6 mb-10 reveal exp-item" data-start="2022-05-17" data-end="2023-05-17">
+<!-- ITEM -->
+<!-- <div class="relative ml-6 mb-10 reveal"> -->
+  <div class="relative ml-6 mb-10 reveal exp-item"
+     data-start="2022-05-17"
+     data-end="2023-05-17">
 
-          <div class="absolute -left-[9px] top-2 w-4 h-4 bg-cyan-400 rounded-full"></div>
+<div class="absolute -left-[9px] top-2 w-4 h-4 bg-cyan-400 rounded-full"></div>
 
-          <h3 class="text-xl text-white">Gventure Technologies</h3>
-          <p id="gventure" class="text-sm text-gray-400"></p>
-          <p>Worked on telecom backend systems and scalable session architecture.</p>
-        </div>
+<h3 class="text-xl text-white">Gventure Technologies</h3>
+<p id="gventure" class="text-sm text-gray-400"></p>
+<p>Worked on telecom backend systems and scalable session architecture.</p>
+</div>
 
-        <!-- ITEM -->
-        <!-- <div class="relative ml-6 mb-10 reveal"> -->
-        <div class="relative ml-6 mb-10 reveal exp-item" data-start="2021-10-19" data-end="2022-03-30">
-          <div class="absolute -left-[9px] top-2 w-4 h-4 bg-cyan-400 rounded-full"></div>
+<!-- ITEM -->
+<!-- <div class="relative ml-6 mb-10 reveal"> -->
+  <div class="relative ml-6 mb-10 reveal exp-item"
+     data-start="2021-10-19"
+     data-end="2022-03-30">
+<div class="absolute -left-[9px] top-2 w-4 h-4 bg-cyan-400 rounded-full"></div>
 
-          <h3 class="text-xl text-white">Prologic Web Solutions</h3>
-          <p id="prologic" class="text-sm text-gray-400"></p>
-          <p>Built Laravel modules and secure authentication systems.</p>
-        </div>
+<h3 class="text-xl text-white">Prologic Web Solutions</h3>
+<p id="prologic" class="text-sm text-gray-400"></p>
+<p>Built Laravel modules and secure authentication systems.</p>
+</div>
 
-      </div>
-    </section>
+</div>
+</section>
 
-    <!-- TECH -->
-    <section class="py-12 text-center">
-      <h2 class="text-3xl text-white mb-6">Tech Stack</h2>
+<!-- TECH -->
+<section class="py-12 text-center">
+<h2 class="text-3xl text-white mb-6">Tech Stack</h2>
 
-      <div class="flex flex-wrap justify-center gap-3">
-        <span class="bg-gray-800 px-3 py-1 rounded">PHP</span>
-        <span class="bg-gray-800 px-3 py-1 rounded">Laravel</span>
-        <span class="bg-gray-800 px-3 py-1 rounded">Node.js</span>
-        <span class="bg-gray-800 px-3 py-1 rounded">Angular</span>
-        <span class="bg-gray-800 px-3 py-1 rounded">MySQL</span>
-        <span class="bg-gray-800 px-3 py-1 rounded">MongoDB</span>
-        <span class="bg-gray-800 px-3 py-1 rounded">JWT</span>
-        <span class="bg-gray-800 px-3 py-1 rounded">OAuth2</span>
-      </div>
-    </section>
+<div class="flex flex-wrap justify-center gap-3">
+<span class="bg-gray-800 px-3 py-1 rounded">PHP</span>
+<span class="bg-gray-800 px-3 py-1 rounded">Laravel</span>
+<span class="bg-gray-800 px-3 py-1 rounded">Node.js</span>
+<span class="bg-gray-800 px-3 py-1 rounded">Angular</span>
+<span class="bg-gray-800 px-3 py-1 rounded">MySQL</span>
+<span class="bg-gray-800 px-3 py-1 rounded">MongoDB</span>
+<span class="bg-gray-800 px-3 py-1 rounded">JWT</span>
+<span class="bg-gray-800 px-3 py-1 rounded">OAuth2</span>
+</div>
+</section>
 
-    <!-- CERTIFICATES -->
-    <section class="py-16 text-center reveal">
-      <h2 class="text-3xl text-white mb-8">AI & Professional Certifications</h2>
+<!-- CERTIFICATES -->
+<section class="py-16 text-center reveal">
+<h2 class="text-3xl text-white mb-8">AI & Professional Certifications</h2>
 
-      <div class="flex flex-wrap justify-center gap-4">
+<div class="flex flex-wrap justify-center gap-4">
 
-        <span class="bg-gray-900 px-4 py-2 rounded">Agentic AI</span>
-        <span class="bg-gray-900 px-4 py-2 rounded">Prompt Engineering</span>
-        <span class="bg-gray-900 px-4 py-2 rounded">RAG Systems</span>
-        <span class="bg-gray-900 px-4 py-2 rounded">AI-Assisted Development</span>
+<span class="bg-gray-900 px-4 py-2 rounded">Agentic AI</span>
+<span class="bg-gray-900 px-4 py-2 rounded">Prompt Engineering</span>
+<span class="bg-gray-900 px-4 py-2 rounded">RAG Systems</span>
+<span class="bg-gray-900 px-4 py-2 rounded">AI-Assisted Development</span>
 
-      </div>
-    </section>
+</div>
+</section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="py-16 px-6">
-      <h2 class="text-3xl font-bold text-center text-white mb-10">Projects</h2>
+<!-- PROJECTS -->
+<section id="projects" class="py-16 px-6">
+  <h2 class="text-3xl font-bold text-center text-white mb-10">Projects</h2>
 
-      <div class="grid md:grid-cols-3 gap-6">
+  <div class="grid md:grid-cols-3 gap-6">
 
-        <!-- MySamm -->
-        <a href="projects/mysamm.html"
-          class="block bg-gray-900 p-6 rounded-lg hover:scale-105 transition border border-cyan-500">
-          <h3 class="text-xl font-semibold text-white">MySamm Secure Platform</h3>
-          <p class="mt-2">Enterprise-grade API system with RBAC, performance monitoring, and automation workflows.</p>
-        </a>
+    <!-- MySamm -->
+    <a href="projects/mysamm.html" class="block bg-gray-900 p-6 rounded-lg hover:scale-105 transition border border-cyan-500">
+      <h3 class="text-xl font-semibold text-white">MySamm Secure Platform</h3>
+      <p class="mt-2">Enterprise-grade API system with RBAC, performance monitoring, and automation workflows.</p>
+    </a>
 
-        <!-- WeSmile -->
-        <a href="projects/wesmile.html"
-          class="block bg-gray-900 p-6 rounded-lg hover:scale-105 transition border border-cyan-500">
-          <h3 class="text-xl font-semibold text-white">WeSmile Dental App</h3>
-          <p class="mt-2">Mobile-first healthcare system with real-time APIs and payment integrations.</p>
-        </a>
+    <!-- WeSmile -->
+    <a href="projects/wesmile.html" class="block bg-gray-900 p-6 rounded-lg hover:scale-105 transition border border-cyan-500">
+      <h3 class="text-xl font-semibold text-white">WeSmile Dental App</h3>
+      <p class="mt-2">Mobile-first healthcare system with real-time APIs and payment integrations.</p>
+    </a>
 
-        <!-- Product -->
-        <a href="projects/product.html"
-          class="block bg-gray-900 p-6 rounded-lg hover:scale-105 transition border border-cyan-500">
-          <h3 class="text-xl font-semibold text-white">Product Management System</h3>
-          <p class="mt-2">Full-stack lifecycle system using MEAN stack architecture.</p>
-        </a>
+    <!-- Product -->
+    <a href="projects/product.html" class="block bg-gray-900 p-6 rounded-lg hover:scale-105 transition border border-cyan-500">
+      <h3 class="text-xl font-semibold text-white">Product Management System</h3>
+      <p class="mt-2">Full-stack lifecycle system using MEAN stack architecture.</p>
+    </a>
 
-        <!-- HRM -->
-        <a href="projects/hrm.html"
-          class="block bg-gray-900 p-6 rounded-lg hover:scale-105 transition border border-cyan-500">
-          <h3 class="text-xl font-semibold text-white">HRM System</h3>
-          <p class="mt-2">Biometric attendance, payroll, task management, and HR automation.</p>
-        </a>
+    <!-- HRM -->
+    <a href="projects/hrm.html" class="block bg-gray-900 p-6 rounded-lg hover:scale-105 transition border border-cyan-500">
+      <h3 class="text-xl font-semibold text-white">HRM System</h3>
+      <p class="mt-2">Biometric attendance, payroll, task management, and HR automation.</p>
+    </a>
 
-        <!-- Naukri Mitra -->
-        <a href="projects/naukrimitra.html"
-          class="block bg-gray-900 p-6 rounded-lg hover:scale-105 transition border border-cyan-500">
-          <h3 class="text-xl font-semibold text-white">NaukriMitra</h3>
-          <p class="mt-2">Job platform with admin dashboard and third-party integrations.</p>
-        </a>
+    <!-- Naukri Mitra -->
+    <a href="projects/naukrimitra.html" class="block bg-gray-900 p-6 rounded-lg hover:scale-105 transition border border-cyan-500">
+      <h3 class="text-xl font-semibold text-white">NaukriMitra</h3>
+      <p class="mt-2">Job platform with admin dashboard and third-party integrations.</p>
+    </a>
 
-        <!-- Need Analysis -->
-        <a href="projects/need-analysis.html"
-          class="block bg-gray-900 p-6 rounded-lg hover:scale-105 transition border border-cyan-500">
-          <h3 class="text-xl font-semibold text-white">Need Analysis (Insurance App)</h3>
-          <p class="mt-2">Data-driven insurance selling and recommendation engine.</p>
-        </a>
+    <!-- Need Analysis -->
+    <a href="projects/need-analysis.html" class="block bg-gray-900 p-6 rounded-lg hover:scale-105 transition border border-cyan-500">
+      <h3 class="text-xl font-semibold text-white">Need Analysis (Insurance App)</h3>
+      <p class="mt-2">Data-driven insurance selling and recommendation engine.</p>
+    </a>
 
-        <!-- LMS -->
-        <a href="projects/lms.html"
-          class="block bg-gray-900 p-6 rounded-lg hover:scale-105 transition border border-cyan-500">
-          <h3 class="text-xl font-semibold text-white">Learning Management System</h3>
-          <p class="mt-2">Course platform with progress tracking and API-based architecture.</p>
-        </a>
+    <!-- LMS -->
+    <a href="projects/lms.html" class="block bg-gray-900 p-6 rounded-lg hover:scale-105 transition border border-cyan-500">
+      <h3 class="text-xl font-semibold text-white">Learning Management System</h3>
+      <p class="mt-2">Course platform with progress tracking and API-based architecture.</p>
+    </a>
 
-        <!-- Quiz -->
-        <a href="projects/quiz.html"
-          class="block bg-gray-900 p-6 rounded-lg hover:scale-105 transition border border-cyan-500">
-          <h3 class="text-xl font-semibold text-white">Quiz Management System</h3>
-          <p class="mt-2">Dynamic quiz engine with analytics and real-time scoring.</p>
-        </a>
-
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="py-16 text-center">
-      <h2 class="text-3xl text-white mb-6">Contact</h2>
-
-      <p>📧 erkajalshukla@gmail.com</p>
-      <p>📱 +91-8882102287</p>
-      <p>📍 Faridabad, Haryana</p>
-
-      <p class="mt-4">LinkedIn: linkedin.com/in/yourprofile</p>
-      <p>GitHub: github.com/yourusername</p>
-      <p>Team ID: kajalsha8@outlook.com</p>
-
-    </section>
+    <!-- Quiz -->
+    <a href="projects/quiz.html" class="block bg-gray-900 p-6 rounded-lg hover:scale-105 transition border border-cyan-500">
+      <h3 class="text-xl font-semibold text-white">Quiz Management System</h3>
+      <p class="mt-2">Dynamic quiz engine with analytics and real-time scoring.</p>
+    </a>
 
   </div>
+</section>
 
-  <script>
-    // ======================
-    // TOGGLE (GENERIC)
-    // ======================
-    function toggle(id) {
-      const el = document.getElementById(id);
-      if (el) {
-        el.classList.toggle("hidden");
-      }
-    }
+<!-- CONTACT -->
+<section class="py-16 text-center">
+<h2 class="text-3xl text-white mb-6">Contact</h2>
 
-    // ======================
-    // DATE FORMAT
-    // ======================
-    function formatDate(date) {
-      return date.toLocaleString('en-US', { month: 'short', year: 'numeric' });
-    }
+<p>📧 erkajalshukla@gmail.com</p>
+<p>📱 +91-8882102287</p>
+<p>📍 Faridabad, Haryana</p>
 
-    // ======================
-    // DURATION CALCULATION
-    // ======================
-    function getDuration(start, end) {
-      let y = end.getFullYear() - start.getFullYear();
-      let m = end.getMonth() - start.getMonth();
+<p class="mt-4">LinkedIn: linkedin.com/in/yourprofile</p>
+<p>GitHub: github.com/yourusername</p>
+<p>Team ID: kajalsha8@outlook.com</p>
 
-      if (m < 0) {
-        y--;
-        m += 12;
-      }
-      return { y, m };
-    }
+</section>
 
-    // ======================
-    // EXPERIENCE CALCULATION (DYNAMIC + SAFE)
-    // ======================
-    function calculateExperience() {
+</div>
 
-      let totalMonths = 0;
+<script>
 
-      const items = document.querySelectorAll(".exp-item");
+// toggle
+function toggle(id){
+document.getElementById(id).classList.toggle("hidden");
+}
 
-      items.forEach(item => {
+// format date
+function formatDate(date){
+return date.toLocaleString('en-US', { month: 'short', year: 'numeric' });
+}
 
-        const start = new Date(item.dataset.start);
-        const end = item.dataset.end === "present"
-          ? new Date()
-          : new Date(item.dataset.end);
+// calculate duration
+function getDuration(start, end){
+let y = end.getFullYear() - start.getFullYear();
+let m = end.getMonth() - start.getMonth();
 
-        // skip invalid dates (extra safety)
-        if (isNaN(start) || isNaN(end)) return;
+if(m < 0){
+y--;
+m += 12;
+}
+return {y,m};
+}
 
-        const { y, m } = getDuration(start, end);
+// calculate all experiences dynamically
+function calculateExperience(){
 
-        // update duration safely
-        const durationEl = item.querySelector(".duration");
-        if (durationEl) {
-          durationEl.innerText =
-            `${formatDate(start)} – ${item.dataset.end === "present" ? "Present" : formatDate(end)} • ${y} yr ${m} mo`;
-        }
+let totalMonths = 0;
 
-        // accumulate total
-        totalMonths += (y * 12 + m);
+document.querySelectorAll(".exp-item").forEach(item => {
 
-      });
+const start = new Date(item.dataset.start);
+const end = item.dataset.end === "present"
+? new Date()
+: new Date(item.dataset.end);
 
-      // update total experience
-      const totalYears = Math.floor(totalMonths / 12);
-      const remMonths = totalMonths % 12;
+const {y, m} = getDuration(start, end);
 
-      const totalExpEl = document.getElementById("totalExp");
-      if (totalExpEl) {
-        totalExpEl.innerText = `${totalYears} yrs ${remMonths} months`;
-      }
+// show per company duration
+item.querySelector(".duration").innerText =
+`${formatDate(start)} – ${item.dataset.end === "present" ? "Present" : formatDate(end)} • ${y} yr ${m} mo`;
 
-    }
+// add to total
+totalMonths += (y * 12 + m);
 
-    // ======================
-    // AUDIO CONTROL
-    // ======================
-    function toggleAudio() {
-      const audio = document.getElementById("introAudio");
-      const btn = document.getElementById("audioBtn");
+});
 
-      if (!audio || !btn) return;
+// total experience
+const totalYears = Math.floor(totalMonths / 12);
+const remMonths = totalMonths % 12;
 
-      if (audio.paused) {
-        audio.play().then(() => {
-          btn.innerText = "⏸";
-        }).catch(err => {
-          console.error("Audio play failed:", err);
-          alert("Audio couldn't play. Check file path or browser permissions.");
-        });
-      } else {
-        audio.pause();
-        btn.innerText = "▶";
-      }
-    }
+document.getElementById("totalExp").innerText =
+`${totalYears} yrs ${remMonths} months`;
+}
 
-    function setupAudio() {
-      const audio = document.getElementById("introAudio");
-      const btn = document.getElementById("audioBtn");
+calculateExperience();
 
-      if (!audio || !btn) return;
+// animation
+ScrollReveal().reveal('.reveal',{distance:'40px',duration:800});
 
-      audio.addEventListener("ended", () => {
-        btn.innerText = "▶";
-      });
+// PDF with BLACK TEXT FIX
+async function downloadPDF(){
 
-      audio.addEventListener("error", () => {
-        console.error("Audio failed to load.");
-      });
-    }
+const { jsPDF } = window.jspdf;
+const content = document.getElementById("portfolioContent");
 
-    
-    // ======================
-    // PDF DOWNLOAD (BLACK TEXT FIX)
-    // ======================
-    async function downloadPDF() {
+// clone to avoid UI color change
+const clone = content.cloneNode(true);
 
-      const { jsPDF } = window.jspdf;
-      const content = document.getElementById("portfolioContent");
+// force black text
+clone.querySelectorAll("*").forEach(el => {
+el.style.color = "#000";
+});
 
-      if (!content) return;
+// hidden render container
+const wrapper = document.createElement("div");
+wrapper.style.position = "absolute";
+wrapper.style.left = "-9999px";
+wrapper.appendChild(clone);
+document.body.appendChild(wrapper);
 
-      // clone DOM
-      const clone = content.cloneNode(true);
+const canvas = await html2canvas(clone, { scale: 2 });
+const img = canvas.toDataURL("image/png");
 
-      // force black text
-      clone.querySelectorAll("*").forEach(el => {
-        el.style.color = "#000";
-      });
+const pdf = new jsPDF("p","mm","a4");
 
-      // render offscreen
-      const wrapper = document.createElement("div");
-      wrapper.style.position = "absolute";
-      wrapper.style.left = "-9999px";
-      wrapper.appendChild(clone);
-      document.body.appendChild(wrapper);
+const imgWidth = 210;
+const imgHeight = canvas.height * imgWidth / canvas.width;
 
-      const canvas = await html2canvas(clone, { scale: 2 });
-      const img = canvas.toDataURL("image/png");
+pdf.addImage(img,"PNG",0,0,imgWidth,imgHeight);
+pdf.save("Kajal_Portfolio.pdf");
 
-      const pdf = new jsPDF("p", "mm", "a4");
+// cleanup
+document.body.removeChild(wrapper);
+}
 
-      const imgWidth = 210;
-      const imgHeight = canvas.height * imgWidth / canvas.width;
+function toggleAudio(){
+const audio = document.getElementById("introAudio");
 
-      pdf.addImage(img, "PNG", 0, 0, imgWidth, imgHeight);
-      pdf.save("Kajal_Portfolio.pdf");
+if(audio.paused){
+audio.play();
+event.target.innerText = "⏸";
+}else{
+audio.pause();
+event.target.innerText = "▶";
+}
+}
+const audio = document.getElementById("introAudio");
 
-      // cleanup
-      document.body.removeChild(wrapper);
-
-    }
-
-    // ======================
-    // INIT (IMPORTANT)
-    // ======================
-    document.addEventListener("DOMContentLoaded", () => {
-
-      calculateExperience();
-      setupAudio();
-
-      // animations
-      if (typeof ScrollReveal !== "undefined") {
-        ScrollReveal().reveal('.reveal', {
-          distance: '40px',
-          duration: 800,
-          origin: 'bottom'
-        });
-      }
-
-    });
-  </script>
+audio.addEventListener("ended", () => {
+document.querySelector("button").innerText = "▶";
+});
+</script>
 
 </body>
-
-</html>
+</html> 
